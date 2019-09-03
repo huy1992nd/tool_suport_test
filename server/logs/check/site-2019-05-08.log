@@ -1,0 +1,61 @@
+[2019-05-08T09:50:21.686] [INFO] warning - TIME : 2019-5-8 09:50:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  NUMBER LINE : 0
+[2019-05-08T09:52:26.637] [INFO] warning - TIME : 2019-5-8 09:52:26 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T09:54:09.327] [INFO] warning - TIME : 2019-5-8 09:54:09 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T09:55:04.576] [INFO] warning - TIME : 2019-5-8 09:55:04 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T09:55:17.081] [INFO] warning - TIME : 2019-5-8 09:55:17 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T09:55:22.599] [INFO] warning - undefined--- NUMBER LINE : 0
+[2019-05-08T09:55:49.352] [INFO] warning - undefined--- NUMBER LINE : 0
+[2019-05-08T09:57:57.696] [INFO] warning - TIME : 2019-5-8 09:57:57 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:00:06.561] [INFO] warning - TIME : 2019-5-8 10:00:06 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:10:19.519] [INFO] warning - TIME : 2019-5-8 10:10:19 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:13:35.936] [INFO] warning - TIME : 2019-5-8 10:13:35 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:13.392] [INFO] warning - TIME : 2019-5-8 10:15:13 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:17.806] [INFO] warning - TIME : 2019-5-8 10:15:17 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:19.951] [INFO] warning - TIME : 2019-5-8 10:15:19 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:20.143] [INFO] warning - TIME : 2019-5-8 10:15:20 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:20.319] [INFO] warning - TIME : 2019-5-8 10:15:20 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:20.502] [INFO] warning - TIME : 2019-5-8 10:15:20 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:20.674] [INFO] warning - TIME : 2019-5-8 10:15:20 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:20.838] [INFO] warning - TIME : 2019-5-8 10:15:20 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:21.023] [INFO] warning - TIME : 2019-5-8 10:15:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:21.199] [INFO] warning - TIME : 2019-5-8 10:15:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:21.358] [INFO] warning - TIME : 2019-5-8 10:15:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:21.854] [INFO] warning - TIME : 2019-5-8 10:15:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:22.046] [INFO] warning - TIME : 2019-5-8 10:15:22 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:22.222] [INFO] warning - TIME : 2019-5-8 10:15:22 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:22.384] [INFO] warning - TIME : 2019-5-8 10:15:22 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:22.896] [INFO] warning - TIME : 2019-5-8 10:15:22 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:23.071] [INFO] warning - TIME : 2019-5-8 10:15:23 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:15:23.231] [INFO] warning - TIME : 2019-5-8 10:15:23 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T10:19:21.201] [INFO] warning - TIME : 2019-5-8 10:19:21 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:00:25.392] [INFO] warning - TIME : 2019-5-8 11:00:25 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:12:22.857] [INFO] warning - TIME : 2019-5-8 11:12:22 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:22:49.495] [INFO] warning - TIME : 2019-5-8 11:22:49 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:23:19.753] [INFO] warning - TIME : 2019-5-8 11:23:19 --- MODULE : gateway --- CONTENT : 2019-04-22T07:21:30.672Z [rate not true]  --- NUMBER LINE : 1
+[2019-05-08T11:23:35.333] [INFO] warning - TIME : 2019-5-8 11:23:35 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:23:36.275] [INFO] warning - TIME : 2019-5-8 11:23:36 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:23:37.698] [INFO] warning - TIME : 2019-5-8 11:23:37 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T11:23:58.141] [INFO] warning - TIME : 2019-5-8 11:23:58 --- MODULE : gateway --- CONTENT : 2019-04-22T07:21:30.672Z [rate not true]  --- NUMBER LINE : 2
+[2019-05-08T11:25:26.025] [INFO] warning - TIME : 2019-5-8 11:25:26 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:25:28.332] [INFO] warning - TIME : 2019-5-8 11:25:28 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:25:30.351] [INFO] warning - TIME : 2019-5-8 11:25:30 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:25:31.868] [INFO] warning - TIME : 2019-5-8 11:25:31 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:39:11.914] [INFO] warning - TIME : 2019-5-8 11:39:11 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:41:13.743] [INFO] warning - TIME : 2019-5-8 11:41:13 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:41:21.122] [INFO] warning - TIME : 2019-5-8 11:41:21 --- MODULE : mysql --- CONTENT : Test [Warning] for tool...  --- NUMBER LINE : 1
+[2019-05-08T11:41:54.970] [INFO] warning - TIME : 2019-5-8 11:41:54 --- MODULE : mysql --- CONTENT : Test [ERROR] for tool...  --- NUMBER LINE : 1
+[2019-05-08T14:04:04.405] [INFO] warning - TIME : 2019-5-8 14:04:04 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T14:48:56.904] [INFO] warning - TIME : 2019-5-8 14:48:41 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T14:48:56.937] [INFO] warning - TIME : 2019-5-8 14:48:56 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T14:49:07.737] [INFO] warning - TIME : 2019-5-8 14:49:07 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T14:52:05.582] [INFO] warning - TIME : 2019-5-8 14:52:05 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T14:54:07.142] [INFO] warning - TIME : 2019-5-8 14:54:07 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 1
+[2019-05-08T15:01:38.435] [INFO] warning - TIME : 2019-5-8 15:01:38 --- MODULE : mysql --- CONTENT :  aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T15:02:12.834] [INFO] warning - TIME : 2019-5-8 15:02:12 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 2
+[2019-05-08T15:02:34.162] [INFO] warning - TIME : 2019-5-8 15:02:34 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 3
+[2019-05-08T15:03:04.935] [INFO] warning - TIME : 2019-5-8 15:03:04 --- MODULE : mysql --- CONTENT :  ccc aaa bbbbb [Warning]  TEST3 f new  --- NUMBER LINE : 1
+[2019-05-08T15:03:32.662] [INFO] warning - TIME : 2019-5-8 15:03:32 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 4
+[2019-05-08T15:03:44.850] [INFO] warning - TIME : 2019-5-8 15:03:44 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 1
+[2019-05-08T15:07:39.498] [INFO] warning - TIME : 2019-5-8 15:07:39 --- MODULE : api_spot --- CONTENT : [FAILED] testtttt  --- NUMBER LINE : 4
+[2019-05-08T15:08:44.695] [INFO] warning - TIME : 2019-5-8 15:08:44 --- MODULE : api_spot --- CONTENT : [FAILED] test  --- NUMBER LINE : 5
+[2019-05-08T15:08:58.722] [INFO] warning - TIME : 2019-5-8 15:08:58 --- MODULE : api_spot --- CONTENT : [FAILED] test new  --- NUMBER LINE : 6

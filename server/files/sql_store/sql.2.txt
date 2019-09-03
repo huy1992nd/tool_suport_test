@@ -1,0 +1,22 @@
+-- Begin: generate_sql_where_clause_v2
+-- Sinh dieu kien trong SQL tinh NOP
+
+CREATE PROCEDURE generate_sql_where_clause_v2(IN isCover TINYINT, IN symbol VARCHAR(20), IN isB2C TINYINT, IN endTime VARCHAR(30), OUT nopSQLWhere TEXT) DETERMINISTIC
+BEGIN
+	SET nopSQLWhere = "";
+	SET nopSQLWhere = "currency_pair_cd = '";
+	SET nopSQLWhere = CONCAT(nopSQLWhere, symbol);
+	SET nopSQLWhere = CONCAT(nopSQLWhere, "'");
+	IF isB2C <> 0 THEN 
+		SET nopSQLWhere = CONCAT(nopSQLWhere, " AND is_cs=0");
+	END IF;
+	IF endTime <> "" THEN 
+		IF isCover <> 0 THEN 
+			SET nopSQLWhere = CONCAT(nopSQLWhere, " AND trade_dt<'");
+		ELSE
+			SET nopSQLWhere = CONCAT(nopSQLWhere, " AND execution_dt<'");
+		END IF;
+		SET nopSQLWhere = CONCAT(nopSQLWhere, endTime);
+		SET nopSQLWhere = CONCAT(nopSQLWhere, "'");
+	END IF;
+

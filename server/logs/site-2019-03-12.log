@@ -1,0 +1,211 @@
+[2019-03-12T09:21:01.457] [INFO] warning - task check nop time : 2019-03-12T02:21:01.457Z
+[2019-03-12T09:27:17.113] [INFO] warning - task check nop time : 2019-03-12T02:27:17.113Z
+[2019-03-12T09:28:51.945] [INFO] warning - task check nop time : 2019-03-12T02:28:51.945Z
+[2019-03-12T09:30:10.560] [INFO] warning - task check nop time : 2019-03-12T02:30:10.560Z
+[2019-03-12T09:31:19.353] [INFO] warning - task check nop time : 2019-03-12T02:31:19.353Z
+[2019-03-12T09:33:33.993] [INFO] warning - task check nop time : 2019-03-12T02:33:33.992Z
+[2019-03-12T09:48:11.070] [INFO] warning - task check nop time : 2019-03-12T02:48:11.069Z
+[2019-03-12T09:49:53.774] [INFO] warning - task check nop time : 2019-03-12T02:49:53.774Z
+[2019-03-12T09:55:12.910] [INFO] warning - task check nop time : 2019-03-12T02:55:12.910Z
+[2019-03-12T09:57:12.710] [INFO] warning - task check nop time : 2019-03-12T02:57:12.710Z
+[2019-03-12T10:09:33.910] [INFO] warning - task check nop time : 2019-03-12T03:09:33.910Z
+[2019-03-12T10:14:04.130] [INFO] warning - task check nop time : 2019-03-12T03:14:04.130Z
+[2019-03-12T10:21:49.381] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-12T10:21:49.387] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-12T10:22:29.112] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-12T10:23:11.407] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-12T10:23:11.415] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-12T10:29:27.966] [INFO] warning - task check nop time : 2019-03-12T03:29:27.966Z
+[2019-03-12T10:36:53.521] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-12T10:36:53.535] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-12T10:37:37.346] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-12T10:38:20.797] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-12T10:38:20.811] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-12T10:46:10.206] [INFO] warning - task check nop time : 2019-03-12T03:46:10.205Z
+[2019-03-12T10:49:34.967] [INFO] warning - task check nop time : 2019-03-12T03:49:34.967Z
+[2019-03-12T10:54:46.079] [INFO] warning - task check nop time : 2019-03-12T03:54:46.079Z
+[2019-03-12T10:56:03.392] [INFO] warning - task check nop time : 2019-03-12T03:56:03.392Z
+[2019-03-12T10:57:22.161] [INFO] warning - task check nop time : 2019-03-12T03:57:22.160Z
+[2019-03-12T10:58:17.608] [INFO] warning - task check nop time : 2019-03-12T03:58:17.608Z
+[2019-03-12T11:04:11.672] [INFO] warning - task check nop time : 2019-03-12T04:04:11.672Z
+[2019-03-12T11:07:12.329] [INFO] warning - task check nop time : 2019-03-12T04:07:12.329Z
+[2019-03-12T11:08:06.377] [INFO] warning - task check nop time : 2019-03-12T04:08:06.376Z
+[2019-03-12T11:11:15.840] [INFO] warning - task check nop time : 2019-03-12T04:11:15.840Z
+[2019-03-12T11:17:03.633] [INFO] warning - task check nop time : 2019-03-12T04:17:03.633Z
+[2019-03-12T11:18:17.930] [INFO] warning - task check nop time : 2019-03-12T04:18:17.929Z
+[2019-03-12T11:22:34.213] [INFO] warning - task check nop time : 2019-03-12T04:22:34.212Z
+[2019-03-12T11:25:57.925] [INFO] warning - task check nop time : 2019-03-12T04:25:57.925Z
+[2019-03-12T11:27:37.413] [INFO] warning - task check nop time : 2019-03-12T04:27:37.413Z
+[2019-03-12T11:29:19.293] [INFO] warning - task check nop time : 2019-03-12T04:29:19.293Z
+[2019-03-12T11:33:43.901] [INFO] warning - task check nop time : 2019-03-12T04:33:43.901Z
+[2019-03-12T11:41:08.239] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-12T11:41:08.251] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-12T11:41:49.284] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-12T11:42:29.641] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-12T11:42:29.650] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-12T11:42:45.999] [INFO] warning - task check nop time : 2019-03-12T04:42:45.999Z
+[2019-03-12T11:44:19.853] [INFO] warning - task check nop time : 2019-03-12T04:44:19.853Z
+[2019-03-12T11:45:59.829] [INFO] warning - task check nop time : 2019-03-12T04:45:59.829Z
+[2019-03-12T13:37:18.781] [INFO] warning - task check nop time : 2019-03-12T06:37:18.781Z
+[2019-03-12T13:38:39.173] [INFO] warning - task check nop time : 2019-03-12T06:38:39.173Z
+[2019-03-12T13:41:37.806] [INFO] warning - task check nop time : 2019-03-12T06:41:37.806Z
+[2019-03-12T13:42:07.438] [INFO] warning - task check nop time : 2019-03-12T06:42:07.438Z
+[2019-03-12T13:42:47.014] [INFO] warning - task check nop time : 2019-03-12T06:42:47.014Z
+[2019-03-12T13:44:54.469] [INFO] warning - task check nop time : 2019-03-12T06:44:54.469Z
+[2019-03-12T14:01:58.897] [INFO] warning - task check nop time : 2019-03-12T07:01:58.897Z
+[2019-03-12T14:06:22.370] [INFO] warning - task check nop time : 2019-03-12T07:06:22.370Z
+[2019-03-12T14:07:43.161] [INFO] warning - task check nop time : 2019-03-12T07:07:43.161Z
+[2019-03-12T14:09:42.706] [INFO] warning - task check nop time : 2019-03-12T07:09:42.706Z
+[2019-03-12T14:11:36.427] [INFO] warning - task check nop time : 2019-03-12T07:11:36.427Z
+[2019-03-12T14:13:25.107] [INFO] warning - task check nop time : 2019-03-12T07:13:25.107Z
+[2019-03-12T14:15:18.205] [INFO] warning - task check nop time : 2019-03-12T07:15:18.205Z
+[2019-03-12T14:17:04.334] [INFO] warning - task check nop time : 2019-03-12T07:17:04.333Z
+[2019-03-12T14:18:32.590] [INFO] warning - task check nop time : 2019-03-12T07:18:32.590Z
+[2019-03-12T14:20:59.664] [INFO] warning - task check nop time : 2019-03-12T07:20:59.664Z
+[2019-03-12T14:22:41.063] [INFO] warning - task check nop time : 2019-03-12T07:22:41.062Z
+[2019-03-12T14:27:17.050] [INFO] warning - task check nop time : 2019-03-12T07:27:17.050Z
+[2019-03-12T14:29:05.338] [INFO] warning - task check nop time : 2019-03-12T07:29:05.338Z
+[2019-03-12T14:30:57.538] [INFO] warning - task check nop time : 2019-03-12T07:30:57.538Z
+[2019-03-12T14:31:49.234] [INFO] warning - task check nop time : 2019-03-12T07:31:49.234Z
+[2019-03-12T14:33:00.250] [INFO] warning - task check nop time : 2019-03-12T07:33:00.250Z
+[2019-03-12T14:39:12.771] [INFO] warning - task check nop time : 2019-03-12T07:39:12.771Z
+[2019-03-12T15:01:53.988] [INFO] warning - task check nop time : 2019-03-12T08:01:53.988Z
+[2019-03-12T15:03:44.117] [INFO] warning - task check nop time : 2019-03-12T08:03:44.117Z
+[2019-03-12T15:11:57.246] [INFO] warning - task check nop time : 2019-03-12T08:11:57.246Z
+[2019-03-12T15:25:07.645] [INFO] warning - task check nop time : 2019-03-12T08:25:07.645Z
+[2019-03-12T15:27:02.494] [INFO] warning - task check nop time : 2019-03-12T08:27:02.494Z
+[2019-03-12T15:28:47.709] [INFO] warning - task check nop time : 2019-03-12T08:28:47.709Z
+[2019-03-12T15:34:06.039] [INFO] warning - task check nop time : 2019-03-12T08:34:06.039Z
+[2019-03-12T15:37:59.983] [INFO] warning - task check nop time : 2019-03-12T08:37:59.983Z
+[2019-03-12T16:22:02.319] [INFO] warning - task check nop time : 2019-03-12T09:22:02.319Z
+[2019-03-12T16:25:09.079] [INFO] warning - task check nop time : 2019-03-12T09:25:09.079Z
+[2019-03-12T16:29:16.408] [INFO] warning - task check nop time : 2019-03-12T09:29:16.408Z
+[2019-03-12T16:30:30.704] [INFO] warning - task check nop time : 2019-03-12T09:30:30.704Z
+[2019-03-12T16:32:48.545] [INFO] warning - task check nop time : 2019-03-12T09:32:48.545Z
+[2019-03-12T16:35:10.914] [INFO] warning - task check nop time : 2019-03-12T09:35:10.914Z
+[2019-03-12T16:43:18.700] [INFO] warning - task check nop time : 2019-03-12T09:43:18.699Z
+[2019-03-12T16:49:58.917] [INFO] warning - task check nop time : 2019-03-12T09:49:58.916Z
+[2019-03-12T16:51:10.726] [INFO] warning - task check nop time : 2019-03-12T09:51:10.725Z
+[2019-03-12T16:52:30.621] [INFO] warning - task check nop time : 2019-03-12T09:52:30.621Z
+[2019-03-12T16:55:12.573] [INFO] warning - task check nop time : 2019-03-12T09:55:12.573Z
+[2019-03-12T17:10:36.391] [INFO] warning - task check nop time : 2019-03-12T10:10:36.391Z

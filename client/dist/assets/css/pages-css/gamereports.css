@@ -1,0 +1,48 @@
+#gamestats_table{
+	font-size: x-small;
+	color: #FFF;
+}
+
+#gamestats_table tfoot{
+	font-weight: bold;
+}
+
+#gamestats_table thead tr th{
+	font-weight: bold;
+}
+
+
+pre{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+}
+
+.widget:not(.widget-tabs) .tab-content {
+    background: none repeat scroll 0px 0px rgba(51, 51, 51, 0.25);
+    border: medium none;
+    border-radius: 0px 0px 1px 1px;
+    padding: 10px;
+}
+
+#tabcontents{
+	
+	word-wrap: break-word;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.panel:nth-child(n) .panel-heading {
+   border-left: none;
+}
+
+.raw{
+	white-space: normal;
+}
+
+.ui-datepicker-month{
+    background-color: rgb(137, 99, 56);
+}
+.ui-datepicker-year{
+    background-color: rgb(137, 99, 56);
+}

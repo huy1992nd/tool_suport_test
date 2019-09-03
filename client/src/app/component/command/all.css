@@ -1,0 +1,24 @@
+.select-config::before {
+  content: "Select enviroment : ";
+  margin-right: 10px;
+}
+.select-market::before {
+  content: "Select market : ";
+  margin-right: 10px;
+}
+.select-screen::before {
+  content: "Select screen : ";
+  margin-right: 10px;
+}
+.select-symbol::before {
+  content: "Select symbol : ";
+  margin-right: 10px;
+}
+.error-check{
+  background-color: red;
+}
+
+td {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}

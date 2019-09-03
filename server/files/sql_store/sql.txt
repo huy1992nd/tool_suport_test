@@ -1,0 +1,299 @@
+-- Ham tinh nop
+DROP PROCEDURE IF EXISTS calculate_nop_v2;
+DROP PROCEDURE IF EXISTS generate_sql_where_clause_v2;
+DROP PROCEDURE IF EXISTS generate_nop_sql_v2;
+DROP PROCEDURE IF EXISTS calculate_markup_v2;
+DROP TABLE IF EXISTS tmp_nop_v2;
+
+-- Tao bao tmp chua NOP
+CREATE TABLE tmp_nop_v2 (
+    id BIGINT(20) NOT NULL AUTO_INCREMENT,
+    symbol VARCHAR(50),
+    customer_buy DOUBLE,
+    customer_sell DOUBLE,
+    customer_nop DOUBLE,
+	cover_buy DOUBLE,
+	cover_sell DOUBLE, 
+	cover_nop DOUBLE,
+	commission DOUBLE,
+	markup_lots DOUBLE,
+	nop DOUBLE,
+	realized DOUBLE,
+	unrealized DOUBLE,
+	extra_balance DOUBLE,
+	balance DOUBLE,
+	order_cover_buy_expense DOUBLE,
+	order_cover_sell_expense DOUBLE,
+	PRIMARY KEY (`id`)
+);
+
+-- Begin: generate_sql_where_clause_v2
+-- Sinh dieu kien trong SQL tinh NOP
+DELIMITER $$
+CREATE PROCEDURE generate_sql_where_clause_v2(IN isCover TINYINT, IN symbol VARCHAR(20), IN isB2C TINYINT, IN endTime VARCHAR(30), OUT nopSQLWhere TEXT) DETERMINISTIC
+BEGIN
+	SET nopSQLWhere = "";
+	SET nopSQLWhere = "currency_pair_cd = '";
+	SET nopSQLWhere = CONCAT(nopSQLWhere, symbol);
+	SET nopSQLWhere = CONCAT(nopSQLWhere, "'");
+	IF isB2C <> 0 THEN 
+		SET nopSQLWhere = CONCAT(nopSQLWhere, " AND is_cs=0");
+	END IF;
+	IF endTime <> "" THEN 
+		IF isCover <> 0 THEN 
+			SET nopSQLWhere = CONCAT(nopSQLWhere, " AND trade_dt<'");
+		ELSE
+			SET nopSQLWhere = CONCAT(nopSQLWhere, " AND execution_dt<'");
+		END IF;
+		SET nopSQLWhere = CONCAT(nopSQLWhere, endTime);
+		SET nopSQLWhere = CONCAT(nopSQLWhere, "'");
+	END IF;
+END$$
+DELIMITER ;
+-- End: generate_sql_where_clause
+
+-- Begin: generate_nop_sql_v2
+-- Sinh lenh SQL tinh NOP
+DELIMITER $$
+CREATE PROCEDURE generate_nop_sql_v2(IN symbol VARCHAR(20), IN isB2C TINYINT, IN endTime VARCHAR(30), OUT nopSQL TEXT) DETERMINISTIC
+BEGIN
+	-- Su dung de truy van
+    DECLARE customerSQLWhere TEXT DEFAULT "";
+	DECLARE coverSQLWhere TEXT DEFAULT "";
+
+	-- Sinh dieu kien WHERE
+	CALL generate_sql_where_clause_v2(0, symbol, isB2C, endTime, customerSQLWhere);
+	CALL generate_sql_where_clause_v2(1, symbol, isB2C, endTime, coverSQLWhere);
+
+	-- Tao lenh SQL sinh view chua du lieu
+	SET nopSQL = "";
+	SET nopSQL = "(SELECT execution_id, currency_pair_cd, IF(side='1', '3', IF(side='3', '1', '0')) as side, filled_quantity, execution_price, execution_dt, \"customer\" AS type FROM bpex_execution_orders WHERE ";
+	SET nopSQL = CONCAT(nopSQL, customerSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") UNION ALL (SELECT id as execution_id, currency_pair_cd, side, amount as filled_quantity, price as execution_price, trade_dt as execution_dt, \"cover\" AS type FROM bpex_covers WHERE ");
+	SET nopSQL = CONCAT(nopSQL, coverSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") UNION ALL (SELECT '1970010100000000000' as execution_id, currency_pair_cd, side, filled_quantity, execution_price, '2017-05-01 00.00.00.000' as execution_dt, \"customer\" AS type FROM bpex_mm_orders WHERE order_id = '1970010100000000000' AND ");
+	SET nopSQL = CONCAT(nopSQL, customerSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") ORDER BY execution_dt, execution_id");
+END$$
+DELIMITER ;
+-- End: generate_nop_sql_v2
+
+-- Begin: calculate_markup_v2
+-- Tinh toan markup cho tung symbol
+-- Usage:
+--     CALL calculate_markup_v2('ETH_BTC', '', @v1, @v2);
+--     SELECT @v1, @v2;
+DELIMITER $$
+CREATE PROCEDURE calculate_markup_v2(IN symbol VARCHAR(20), IN endTime VARCHAR(30), OUT markupCommission DOUBLE, OUT markupLot DOUBLE) DETERMINISTIC
+BEGIN
+	DECLARE markupSQL TEXT DEFAULT "";
+	DECLARE customerSQLWhere TEXT DEFAULT "";
+	CALL generate_sql_where_clause_v2(0, symbol, 1, endTime, customerSQLWhere);
+	SET markupSQL = "SELECT IFNULL(SUM(filled_quantity * markup), 0) AS commission, IFNULL(SUM(filled_quantity), 0) AS lots INTO @markupCommission, @markupLot FROM bpex_execution_orders WHERE ";
+	SET markupSQL = CONCAT(markupSQL, customerSQLWhere);
+	
+	SET @markupSQLTmp = markupSQL;
+	PREPARE stmt FROM @markupSQLTmp; 
+	EXECUTE stmt; 
+	DEALLOCATE PREPARE stmt;
+    
+    SET markupCommission = @markupCommission;
+    SET markupLot = @markupLot;
+END$$
+DELIMITER ;
+-- End: calculate_markup_v2
+
+-- Begin: calculate_nop_v2
+-- Tinh NOP, Realized, Unrealized theo file Excel cua HoatVT
+DELIMITER $$
+CREATE PROCEDURE calculate_nop_v2(IN symbol VARCHAR(20), IN isB2C TINYINT, IN endTime VARCHAR(30), IN isNewNOP TINYINT, IN fairvalue DOUBLE) DETERMINISTIC
+BEGIN
+	-- Khai bao hang
+	DECLARE EPSILON DOUBLE DEFAULT 1E-09;
+	
+	-- Khai bao truong du lieu
+	DECLARE executionId VARCHAR(30) DEFAULT "";
+	DECLARE currentPairCd VARCHAR(20) DEFAULT "";
+	DECLARE vSide VARCHAR(1) DEFAULT "";
+	DECLARE filledQuantity DOUBLE DEFAULT 0;
+	DECLARE executionPrice DOUBLE DEFAULT 0;
+	DECLARE executionDt VARCHAR(30) DEFAULT "";
+	DECLARE exeType VARCHAR(20) DEFAULT "";
+	
+	-- Khai bao bien su dung de tinh toan NOP
+	DECLARE customerBuyNOP DOUBLE DEFAULT 0;
+	DECLARE customerSellNOP DOUBLE DEFAULT 0;
+	DECLARE coverBuyNOP DOUBLE DEFAULT 0;
+	DECLARE coverSellNOP DOUBLE DEFAULT 0;
+	DECLARE coverNOP DOUBLE DEFAULT 0;
+	DECLARE customerNOP DOUBLE DEFAULT 0;
+	DECLARE NOP DOUBLE DEFAULT 0;
+	DECLARE extraBalance DOUBLE DEFAULT 0;
+	
+	-- Khai bao bien su dung de tinh Realized, Unrealized
+	DECLARE totalBuy DOUBLE DEFAULT 0;
+	DECLARE totalbuyMax DOUBLE DEFAULT 0;
+	DECLARE totalBuyAmount DOUBLE DEFAULT 0;
+	DECLARE totalBuyAmountMax DOUBLE DEFAULT 0;
+	DECLARE totalSell DOUBLE DEFAULT 0;
+	DECLARE totalSellMax DOUBLE DEFAULT 0;
+	DECLARE totalSellAmount DOUBLE DEFAULT 0;
+	DECLARE totalSellAmountMax DOUBLE DEFAULT 0;
+	DECLARE totalBuyAmountR DOUBLE DEFAULT 0;
+	DECLARE totalSellAmountR DOUBLE DEFAULT 0;
+	DECLARE realized DOUBLE DEFAULT 0;
+	DECLARE unrealized DOUBLE DEFAULT 0;
+	
+	-- Su dung de truy van
+    DECLARE nopSQL TEXT DEFAULT "";
+	DECLARE isFinished INTEGER DEFAULT 0;
+	DEClARE cursorNOP CURSOR FOR SELECT execution_id, currency_pair_cd, side, filled_quantity, execution_price, execution_dt, type FROM view_nop ORDER BY execution_dt,execution_id;
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET isFinished = 1;
+
+	-- Tao lenh SQL sinh view chua du lieu
+	CALL generate_nop_sql_v2(symbol, isB2C, endTime, nopSQL);
+	SET @nopSQL = CONCAT("CREATE VIEW view_nop AS ", nopSQL);
+	-- SELECT CONCAT('SQL: ', nopSQL);
+	
+	-- Tao view chua du lieu can tinh
+	DROP VIEW IF EXISTS view_nop;
+	PREPARE stmt FROM @nopSQL;
+	EXECUTE stmt;
+	DEALLOCATE PREPARE stmt;
+
+	-- Duyet lan 1: Tinh toan tong max cua (buy, sell, buy amount, sell amount)
+	OPEN cursorNOP;
+	get_execution: LOOP
+		FETCH cursorNOP INTO executionId, currentPairCd, vSide, filledQuantity, executionPrice, executionDt, exeType;
+		IF isFinished = 1 THEN 
+			LEAVE get_execution;
+		END IF;
+
+		IF exeType = "cover" THEN
+			IF vSide = '1' THEN
+				SET coverSellNOP = coverSellNOP + filledQuantity;
+			ELSE
+				SET coverBuyNOP = coverBuyNOP + filledQuantity;
+			END IF;
+		ELSE
+			IF vSide = '1' THEN
+				SET customerSellNOP = customerSellNOP + filledQuantity;
+			ELSE
+				SET customerBuyNOP = customerBuyNOP + filledQuantity;
+			END IF;
+		END IF;
+		
+		IF vSide = '1' THEN
+			SET totalSell = totalSell + filledQuantity;
+			SET totalSellAmount = totalSellAmount + filledQuantity*executionPrice;
+		ELSE
+			SET totalBuy = totalBuy + filledQuantity;
+			SET totalBuyAmount = totalBuyAmount + filledQuantity*executionPrice;
+		END IF;
+	END LOOP get_execution;
+	CLOSE cursorNOP;
+	SET totalbuyMax = totalBuy;
+	SET totalBuyAmountMax = totalBuyAmount;
+	SET totalSellMax = totalSell;
+	SET totalSellAmountMax = totalSellAmount;
+	
+	-- Duyet lan 2: Tinh totalBuyAmountR, totalSellAmountR
+	SET totalSell = 0;
+	SET totalSellAmount = 0;
+	SET totalBuy = 0;
+	SET totalBuyAmount = 0;
+	SET totalBuyAmountR = 0;
+	SET totalSellAmountR = 0;
+	SET isFinished = 0;
+	OPEN cursorNOP;
+	get_execution: LOOP
+		FETCH cursorNOP INTO executionId, currentPairCd, vSide, filledQuantity, executionPrice, executionDt, exeType;
+		IF isFinished = 1 THEN 
+			LEAVE get_execution;
+		END IF;
+
+		IF vSide = '1' THEN
+			SET totalSell = totalSell + filledQuantity;
+			SET totalSellAmount = totalSellAmount + filledQuantity*executionPrice;
+		ELSE
+			SET totalBuy = totalBuy + filledQuantity;
+			SET totalBuyAmount = totalBuyAmount + filledQuantity*executionPrice;
+		END IF;
+		
+		IF totalBuy>=totalSellMax THEN
+			SET totalBuyAmountR = totalBuyAmount - (totalBuy-totalSellMax)*executionPrice;
+		END IF;
+		IF totalSell>=totalBuyMax THEN
+			SET totalSellAmountR = totalSellAmount - (totalSell-totalBuyMax)*executionPrice;
+		END IF;
+		IF ABS(totalBuyAmountR)>EPSILON OR ABS(totalSellAmountR)>EPSILON THEN
+			LEAVE get_execution;
+		END IF;
+	END LOOP get_execution;
+	CLOSE cursorNOP;
+	
+	-- Tinh toan NOP
+	SET customerSellNOP = IF(customerSellNOP>0, -customerSellNOP, 0);
+	SET customerNOP = customerBuyNOP + customerSellNOP;
+	SET coverSellNOP = IF(coverSellNOP>0, -coverSellNOP, 0);
+	SET coverNOP = coverBuyNOP + coverSellNOP;
+	SET NOP = customerNOP + coverNOP;
+	
+	-- Tinh toan Markup
+	CALL calculate_markup_v2(symbol, endTime, @markupCommission, @markupLots);
+	
+	-- Tinh Realized, Unrealized
+	IF ABS(totalBuyAmountR)>EPSILON THEN
+		SET realized = totalSellAmountMax - totalBuyAmountR;
+	ELSEIF ABS(totalSellAmountR)>EPSILON THEN
+		SET realized = totalSellAmountR - totalBuyAmountMax;
+	END IF;
+	SET unrealized = totalSellAmountMax - totalBuyAmountMax - realized + NOP*fairvalue;
+	
+	-- Tinh them Extra NOP
+	SET extraBalance = (totalSellAmountMax - totalBuyAmountMax);
+    
+	IF isNewNOP<>0 THEN
+		INSERT INTO `tmp_nop_v2` (
+			`symbol`, `customer_buy`, `customer_sell`, `customer_nop`, `cover_buy`, 
+			`cover_sell`, `cover_nop`, `commission`, `markup_lots`, `nop`,
+			`realized`, `unrealized`, `extra_balance`, `balance`,
+			`order_cover_buy_expense`, `order_cover_sell_expense`
+		) SELECT
+			symbol AS `symbol`, customerBuyNOP AS `customer_buy`, customerSellNOP AS `customer_sell`, customerNOP AS `customer_nop`, coverBuyNOP AS `cover_buy`,
+			coverSellNOP AS `cover_sell`, coverNOP AS `cover_nop`, @markupCommission AS `commission`, @markupLots AS `markup_lots`, NOP AS `nop`,
+			(realized-@markupCommission) AS `realized`, unrealized AS `unrealized`, extraBalance AS `extra_balance`, extraBalance + (unrealized+realized-@markupCommission) AS `balance`,
+			totalBuyAmountMax AS `order_cover_buy_expense`, totalSellAmountMax AS `order_cover_sell_expense`;
+	ELSE
+		INSERT INTO `tmp_nop_v2` (
+			`symbol`, `customer_buy`, `customer_sell`, `customer_nop`, `cover_buy`, 
+			`cover_sell`, `cover_nop`, `commission`, `markup_lots`, `nop`,
+			`realized`, `unrealized`, `extra_balance`, `balance`,
+			`order_cover_buy_expense`, `order_cover_sell_expense`
+		) SELECT
+			symbol AS `symbol`, customerBuyNOP AS `customer_buy`, customerSellNOP AS `customer_sell`, customerNOP AS `customer_nop`, coverBuyNOP AS `cover_buy`,
+			coverSellNOP AS `cover_sell`, coverNOP AS `cover_nop`, @markupCommission AS `commission`, @markupLots AS `markup_lots`, NOP AS `nop`,
+			(realized-@markupCommission) AS `realized`, unrealized AS `unrealized`, 0 AS `extra_balance`, (unrealized+realized-@markupCommission) AS `balance`,
+			totalBuyAmountMax AS `order_cover_buy_expense`, totalSellAmountMax AS `order_cover_sell_expense`;
+	END IF;
+	
+	SELECT * FROM tmp_nop_v2 WHERE id=LAST_INSERT_ID();
+END$$
+DELIMITER ;
+-- End: calculate_nop_v2
+
+-- Chi chay duoc 01 lenh 01 lan, chay nhieu lan cung luc hoac nhieu nguoi cung chay se bi lock view
+-- Khi bi lock view
+-- Chay tung SYMBOL:
+--    CALL calculate_nop_v2(symbol, isB2C, endTime, isNewNOP, fairvalue);
+--    CALL calculate_nop_v2("ETH_BTC", 0, '', 1, 0.06);
+--    CALL calculate_nop_v2("BTC_USD", 1, '2019-01-06 00:00:00.000', 0, 6346.2);
+-- Chay dong thoi nhieu SYMBOLS:
+--    TRUNCATE tmp_nop_v2; 
+--    CALL calculate_nop_v2("BTC_USD", 0, '', 0, 6346.2);
+--    CALL calculate_nop_v2("ETH_USD", 0, '', 0, 222);
+--    CALL calculate_nop_v2("BCC_USD", 0, '', 0, 78.9);
+--    CALL calculate_nop_v2("LTC_USD", 0, '', 0, 26.38);
+--    CALL calculate_nop_v2("XRP_USD", 0, '', 0, 0.2899);
+--    CALL calculate_nop_v2("ETH_BTC", 0, '', 1, 0.06);
+--    SELECT * FROM tmp_nop_v2 ORDER BY id ASC;

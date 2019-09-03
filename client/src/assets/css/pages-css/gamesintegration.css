@@ -1,0 +1,12 @@
+.gameloginpage{
+	background:url('../../images/casino.png');
+	background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+.widget-content {
+	padding: 20px 15px 15px;
+	background-color: rgba(0, 0, 0, .25);
+	border: 1px solid rgba(255,255,255, 0.3);
+}

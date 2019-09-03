@@ -1,0 +1,12 @@
+#otherreports_table{
+	font-size: x-small;
+	color: #FFF;
+}
+
+
+#otherreports_table tfoot{
+	font-weight: bold;
+}
+#otherreports_table thead tr th{
+	font-weight: bold;
+} 

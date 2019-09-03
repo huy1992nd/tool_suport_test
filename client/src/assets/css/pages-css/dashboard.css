@@ -1,0 +1,31 @@
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+#sortable li { 
+	/*margin: 3px 3px 3px 0; 
+	padding: 1px; 
+	
+	text-align: center;
+	height: 90px; 
+	font-size: 4em; */
+	
+	 
+	width: 100px;
+	float: left; 
+}
+
+select[name=languagetable_length]{
+    background-color: #fff !important;  
+}
+
+#httpheader{
+	word-break: break-all;  
+	table-layout: fixed;	
+}
+
+div#languagetable_filter input {
+	 width: 130px 
+}

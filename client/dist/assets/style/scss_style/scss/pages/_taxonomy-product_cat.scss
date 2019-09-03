@@ -1,0 +1,80 @@
+.tours {
+	&__mv {
+		background: url("../images/tours/mv_bg.jpg");
+		background-size: cover;
+		height: vw_pc(556);
+		padding: vw_pc(128) 0 vw_pc(44);
+		@include bp(max, 750px) {
+			height: auto;
+			padding: vw_sp(125) 0 vw_sp(50);
+		}
+		&__container {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		&__list {
+			display: flex;
+			margin-top: vw_pc(42);
+			margin-left: vw_pc(15);
+			@include bp(max, 750px) {
+				margin-top: vw_sp(35);
+			}
+		}
+		&__item {
+			width: vw_pc(132);
+			@include bp(max, 750px) {
+					width: unset;
+			  }
+			& + & {
+				margin-left: vw_pc(35);
+			}
+		}
+		&__img {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		&__ttl {
+			color: #fff;
+			font-size: vw_pc(48);
+			line-height: .75;
+			margin-top: auto;
+			margin-bottom: 0;
+			@include bp(max, 750px) {
+				margin: vw_sp(35) 0 vw_sp(35);
+				font-size: vw_sp(60);
+			}
+		}
+		&__txt {
+			color: #fff;
+			font-size: vw_pc(15);
+			line-height: 1.2;
+			margin-top: vw_pc(25);
+			@include bp(max, 750px) {
+				font-size: vw_sp(30);
+			}
+			p + p {
+				margin-top: vw_pc(15);
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: vw_pc(42);
+	}
+	&__tripadvisorArea {
+		margin-bottom: vw_pc(-270);
+	}
+	&__tripadvisor {
+		background: url('../images/tours/tours_review_bg.jpg') no-repeat;
+		background-size: cover;
+		padding: vw_pc(34) 0 vw_pc(222);
+		margin-bottom: vw_pc(1);
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: space-between;
+	}
+}

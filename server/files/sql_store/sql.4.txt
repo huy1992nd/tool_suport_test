@@ -1,0 +1,21 @@
+-- Begin: calculate_markup_v2
+-- Tinh toan markup cho tung symbol
+-- Usage:
+--     CALL calculate_markup_v2('ETH_BTC', '', @v1, @v2);
+--     SELECT @v1, @v2;
+
+CREATE PROCEDURE calculate_markup_v2(IN symbol VARCHAR(20), IN endTime VARCHAR(30), OUT markupCommission DOUBLE, OUT markupLot DOUBLE) DETERMINISTIC
+BEGIN
+	DECLARE markupSQL TEXT DEFAULT "";
+	DECLARE customerSQLWhere TEXT DEFAULT "";
+	CALL generate_sql_where_clause_v2(0, symbol, 1, endTime, customerSQLWhere);
+	SET markupSQL = "SELECT IFNULL(SUM(filled_quantity * markup), 0) AS commission, IFNULL(SUM(filled_quantity), 0) AS lots INTO @markupCommission, @markupLot FROM bpex_execution_orders WHERE ";
+	SET markupSQL = CONCAT(markupSQL, customerSQLWhere);
+	
+	SET @markupSQLTmp = markupSQL;
+	PREPARE stmt FROM @markupSQLTmp; 
+	EXECUTE stmt; 
+	DEALLOCATE PREPARE stmt;
+    
+    SET markupCommission = @markupCommission;
+    SET markupLot = @markupLot;

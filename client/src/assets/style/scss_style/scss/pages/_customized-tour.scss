@@ -1,0 +1,595 @@
+.customized {
+
+	&__gender{
+
+		border:1px solid #981b1e;
+		width:30%;
+		border-radius:vw_pc(45/2) 0 0 vw_pc(45/2) ;
+		height:vw_pc(45);
+		font-size: vw_pc(16);
+		padding:0 vw_pc(18);
+		color: #981b1e;
+		&select{
+			display:block!important;
+			font-size:16px!important;
+			line-height:1.75!important;
+			background-color: #981b1e!important;
+		}
+	}
+	&__author{
+		margin-left:-5px;
+		border:1px solid #981b1e!important;
+		height:vw_pc(45);
+		width:69%;
+		border-radius:0 vw_pc(45/2) vw_pc(45/2) 0;
+		font-size: vw_pc(16);
+	}
+	&__mv {
+		background: url('../images/customized-mv.jpg') no-repeat;
+		background-size: cover;
+		width: 100%;
+		margin-bottom: vw_pc(24);
+		padding-top: vw_pc(128);
+		&__ttl {
+			margin-top: vw_pc(36);
+		}
+		&__content {
+			padding-bottom: vw_pc(110);
+		}
+	}
+	&__note {
+		margin-bottom: vw_pc(38);
+		span {
+			color: #9a1b1e;
+		}
+	}
+	&__phone {
+		color: #9a1b1e;
+	}
+
+	&__ttl {
+		color: #9a1b1e;
+		font-size: vw_pc(24);
+		text-align: center;
+		line-height: 1;
+		margin-top: 0;
+	}
+	&__ttl-2{
+		color: #9a1b1e;
+		font-size: vw_pc(24);
+		text-align: center;
+		line-height: 1;
+		margin-bottom: vw_pc(30);
+		margin-top: 0;
+	}
+	&__ttl-img{
+		display:block;
+		margin:auto;
+		padding-bottom:vw_pc(10);
+	}
+	&__group {
+		@extend .inner;
+		margin-top: vw_pc(145);
+		&--name {
+			margin-top: 0;
+			padding-top:vw_pc(145);
+
+		}
+		&--info {
+			margin-top: vw_pc(70);
+		}
+		&__table {
+			border:1px solid #9a1b1e;
+			border-radius:25px;
+			padding-bottom:20px;
+		}
+		&__ttl {
+			color: #9a1b1e;
+			font-size: vw_pc(24);
+			line-height: 1;
+			margin-bottom: vw_pc(16);
+			text-align: center;
+			position: relative;
+			&--name {
+				&:before {
+					content: '';
+					background: url(../images/name_before.png);
+					background-size: cover;
+					height: vw_pc(76);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-100);
+					width: vw_pc(75);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--code {
+				padding-top:vw_pc(40);
+
+			}
+			&--visit {
+				&:before {
+					content: '';
+					background: url(../images/visit_before.png);
+					background-size: cover;
+					height: vw_pc(74);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-100);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--hotel {
+				&:before {
+					content: '';
+					background: url(../images/hotel_before.png);
+					background-size: cover;
+					height: vw_pc(59);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-84);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--people {
+				&:before {
+					content: '';
+					background: url(../images/people_before.png);
+					background-size: cover;
+					height: vw_pc(58);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-83);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--date {
+				&:before {
+					content: '';
+					background: url(../images/date_before.png);
+					background-size: cover;
+					height: vw_pc(61);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-86);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--city {
+				&:before {
+					content: '';
+					background: url(../images/city_before.png);
+					background-size: cover;
+					height: vw_pc(76);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-100);
+					width: vw_pc(75);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--budgets {
+				&:before {
+					content: '';
+					background: url(../images/price_before.png);
+					background-size: cover;
+					height: vw_pc(61);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-86);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+			&--detail {
+				&:before {
+					content: '';
+					background: url(../images/ideas_before.png);
+					background-size: cover;
+					height: vw_pc(77);
+					left: 50%;
+					position: absolute;
+					top: vw_pc(-100);
+					width: vw_pc(74);
+					transform: translate(-50% , 0);
+				}
+			}
+		}
+
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			position: relative;
+
+			&--info {
+				width: vw_pc(500);
+				margin: 0 auto;
+			}
+			&--destination {
+				width: vw_pc(500);
+				margin: 0 auto;
+			}
+		}
+
+		&__inner {
+			margin-top: vw_pc(12);
+			position: relative;
+
+			&:nth-child(-n+2) {
+				margin-top: 0;
+			}
+			&:nth-last-child(-n+2) {
+				margin-top: vw_pc(32);
+			}
+			&--info {
+				$item: vw_pc(18);
+				width: calc((100% - #{$item}) / 2 );
+				&:nth-child(2n) {
+					margin-left: vw_pc(18);
+				}
+			}
+		}
+
+		&__list {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__item {
+			$margin: vw_pc(11);
+			margin-left: $margin;
+			width: vw_pc(160);
+
+			&:nth-child(3n+1) {
+				margin-left: 0;
+			}
+
+			&--people {
+				margin-left: 0;
+				text-align: center;
+				width: vw_pc(124);
+				z-index: 99;
+			}
+		}
+	}
+
+	&__input {
+		border: 1px solid #981b1e;
+		border-radius: vw_pc(45/2);
+		height: vw_pc(45);
+		overflow: hidden;
+		position: relative;
+		width: vw_pc(244);
+
+		&--destination {
+			$margin: vw_pc(12);
+			margin-left: $margin;
+			width: calc((100% - 2 * #{$margin}) / 3);
+
+			&:nth-child(3n+1) {
+				margin-left: 0;
+			}
+			&:nth-child(n+4) {
+				margin-top: $margin;
+			}
+		}
+
+		&--hotel {
+			width: vw_pc(328);
+		}
+
+		&--people {
+			margin: 0 auto;
+			width: vw_pc(75);
+
+			.customized__input__select-icon {
+				right: vw_pc(16);
+			}
+		}
+
+		&--date, &--city {
+			width: 100%;
+		}
+
+		&--detail {
+			height: vw_pc(150);
+			width: vw_pc(500);
+		}
+
+		&--info {
+			&-name {
+				.customized__input__select-btn.ui-selectmenu-button.ui-button {
+					border-right: 1px solid #981b1e;
+					left: 0;
+					position: absolute;
+					top: 0;
+					padding: 0 vw_pc(10);
+					width: vw_pc(75);
+				}
+				.customized__input__select-icon {
+					right: vw_pc(10);
+				}
+			}
+		}
+
+		input {
+			background: #fff;
+			border: none;
+			color: #981b1e;
+			font-size: vw_pc(16);
+			font-weight: normal;
+			height: 100%;
+			padding: 0 vw_pc(12);
+			width: 100%;
+			&:focus {
+				background: #fff;
+				color: #981b1e;
+			}
+			&:hover {
+				background: rgba(152, 27, 30, .15);
+			}
+			&[type=checkbox] {
+				display: none;
+
+				& + .customized__input__label {
+					color: #981b1e;
+					display: block;
+					font-size: vw_pc(16);
+					height: 100%;
+					line-height: calc(#{vw_pc(45)} - 2px);
+					text-align: center;
+					margin: 0;
+					text-transform: uppercase;
+					width: 100%;
+
+					&:hover {
+						background: rgba(152, 27, 30, .15);
+					}
+				}
+
+				&:checked + .customized__input__label {
+					background: #981b1e;
+					color: #fff;
+				}
+			}
+			&[type="date"] {
+				&::-webkit-inner-spin-button,
+				&::-webkit-calendar-picker-indicator,
+				&::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+				}
+			}
+			&[type="submit"] {
+			}
+		}
+
+		textarea {
+			border: none;
+			border-radius: vw_pc(22);
+			padding: vw_pc(12);
+			resize: none;
+			text-align: justify;
+			&:focus {
+				background: #fff;
+				color: #981b1e;
+			}
+			&:hover {
+				background: rgba(152, 27, 30, .15);
+			}
+		}
+
+		&__input {
+			color: #981b1e;
+			font-size: vw_pc(16);
+			height: 100%;
+			width: 100%;
+			&--date {
+				text-transform: uppercase;
+			}
+			&--info {
+				padding-left: vw_pc(80)!important;
+			}
+			// &--robot {
+			// 	border: 1px solid #981b1e;
+			// 	border-radius: 50%;
+			// 	height: vw_pc(40);
+			// 	width: vw_pc(40);
+			// }
+		}
+
+		&__select-btn {
+			&.ui-selectmenu-button.ui-button {
+				background: #fff;
+				border: none;
+				color: #981b1e;
+				height: 100%;
+				line-height: calc(#{vw_pc(45)} - 2px);
+				margin: 0;
+				padding: 0 vw_pc(18);
+				width: 100%;
+
+				&:hover {
+					background: rgba(152, 27, 30, .15);
+				}
+			}
+		}
+
+		&__select-icon {
+			position: absolute;
+			right: vw_pc(22);
+			top: 50%;
+			transform: translateY(-50%);
+			@include tri-b(#981b1e, vw_pc(18), vw_pc(11));
+			&.ui-icon {
+				background: none;
+
+				&:active, &:hover, &:focus {
+					background: none;
+				}
+			}
+		}
+
+		&__select-text {
+			font-size: vw_pc(16);
+			height: 100%;
+			margin: 0;
+		}
+
+		&__select-menu {
+			.ui-menu {
+				max-height: vw_pc(200);
+			}
+			.ui-menu-item-wrapper {
+				color: #981b1e;
+				font-size: vw_pc(16);
+				border: 0;
+
+				&.ui-state-active {
+					color: #fff;
+					background: #981b1e;
+				}
+			}
+		}
+
+		&__label {
+			display: block;
+			font-size: vw_pc(14);
+			line-height: 1;
+			padding-left: vw_pc(18);
+			margin-bottom: vw_pc(12);
+			width: 100%;
+
+			&--people {
+				padding-left: 0;
+			}
+			&--destination {
+				cursor: pointer;
+				padding-left: 0;
+			}
+
+		}
+
+		&__note {
+			font-size: vw_pc(14);
+			line-height: vw_pc(16);
+			margin-bottom: vw_pc(12);
+			text-align: center;
+			width: 100%;
+		}
+
+		&__submit {
+			float: right;
+			width: vw_pc(110);
+			&--info {
+				cursor: pointer;
+				text-transform: uppercase;
+			}
+		}
+	}
+	&__nav {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		right: vw_pc(300);
+		&__btn {
+			& + & {
+				margin-top: vw_pc(15);
+			}
+		}
+		&__anchor {
+			display: block;
+			&:before {
+				content: '';
+				display: block;
+				border: vw_pc(2) solid #981b1e;
+				border-radius: 50%;
+				height: vw_pc(15);
+				width: vw_pc(15);
+			}
+			&:hover {
+				&:before {
+					background: #981b1e;
+				}
+			}
+			&--active {
+				&:before {
+					background: #981b1e;
+				}
+			}
+		}
+	}
+
+}
+
+.customized__input__label__robot {
+	display: block;
+	position: relative;
+	padding-left: vw_pc(65);
+	/* margin-bottom: vw_pc(18); */
+	cursor: pointer;
+	line-height: vw_pc(45);
+	font-size: vw_pc(14);
+	user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+	&--check {
+		border: 1px solid #981b1e;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: vw_pc(45);
+		width: vw_pc(45);
+		background-color: #fff;
+		&:after {
+			left: 50%;
+			top: 50%;
+			width: vw_pc(10);
+			height: vw_pc(20);
+			border: solid #fff;
+			transform: translate(-50% ,-50%) rotate(45deg);
+			border-width: 0 vw_pc(3) vw_pc(3) 0;
+		}
+	}
+	&:hover input ~ .customized__input__label__robot--check {
+		background-color: rgba(152, 27, 30, 0.15);
+	}
+	& input:checked ~ .customized__input__label__robot--check {
+		background-color: #981b1e;
+	}
+	& input:checked ~ .customized__input__label__robot--check:after {
+		display: block;
+	}
+}
+.customized__input__label__robot--check:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.customize_nav {
+	display:flex;
+	justify-content:space-between;
+
+}
+.slick_prev {
+	justify-content:flex-start;
+	z-index: 1000;
+	background-color: #981b1e;
+	color:white;
+
+}
+.slick_next {
+	justify-content:flex-end;
+	z-index: 1000;
+	background-color: #981b1e;
+	color:white;
+
+}

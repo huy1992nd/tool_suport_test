@@ -1,0 +1,104 @@
+<div   class="container">
+    <div  class="top-navbar header b-b">
+      <a data-original-title="Toggle navigation" class="toggle-side-nav pull-left" href="#">
+        <i class="icon-reorder"></i>
+      </a>
+      <div class="brand pull-left">
+        <a (click) ="changeCurrentTab(getpageHome())" >
+          <img src="assets/images/logo2.png" width="147" height="33">
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right  hidden-xs">
+        <li class="dropdown user  hidden-xs">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <i class="icon-male"></i>
+            <span style="padding: 0 3px;" class="username">{{current_user.username}}</span>
+            <i class="icon-caret-down small"></i>
+          </a>
+          <ul class="dropdown-menu">
+  
+            <li class="divider"></li>
+            <li>
+              <a (click)="logout()">
+                <i class="icon-key"></i> Log Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+<!-- <toaster-container [toasterconfig]="config1"></toaster-container> -->
+
+<div class="wrapper">
+  <div class="left-nav">
+    <div id="side-nav">
+      <ul id="nav">
+        <li *ngIf="checkPermission('check-log')" class="{{current_tab == 'check-log' ? 'current': ''}}"> <a  (click)="changeCurrentTab('check-log')"> <i class="icon-edit"></i> CHECK LOG </a>
+        </li>
+        <li *ngIf="checkPermission('check-nop')" class="{{current_tab == 'check-nop' ? 'current': ''}}"> <a  (click)="changeCurrentTab('check-nop')"> <i class="icon-edit"></i> CHECK NOP </a>
+        </li>
+        <li *ngIf="checkPermission('format-data')" class="{{current_tab == 'format-data' ? 'current': ''}}"> <a  (click)="changeCurrentTab('format-data')"> <i class="icon-edit"></i> FORMAT DATA </a>
+        </li>
+        <li *ngIf="checkPermission('check-rate')" class="{{current_tab == 'check-rate' ? 'current': ''}}"> <a  (click)="changeCurrentTab('check-rate')"> <i class="icon-edit"></i> Check Rate </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-content">
+
+    <div class="content container" *ngIf="current_tab=='home'" >
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="page-title">Dashboard <small>Thông tin tổng quan</small></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+              <div class="stats-heading">Account</div>
+              <div class="stats-body-alt">
+
+                <div class="text-center"><span class="text-top">$</span>{{ appData.account ? appData.account: 0}}</div>
+                <small>{{ appData.current_account}} acc đang chạy </small> </div>
+              <div class="stats-footer" (click)="changeCurrentTab('account')" >Chi tiết</div>
+            </a> </div>
+            <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+              <div class="stats-heading">Proxy</div>
+              <div class="stats-body-alt">
+
+                <div class="text-center"><span class="text-top">$</span>0</div>
+                <small>100 proxy đang chạy </small> </div>
+              <div class="stats-footer">chi tiết</div>
+            </a> </div>
+            <div class="col-md-3 col-xs-12 col-sm-6"> <a class="stats-container">
+              <div class="stats-heading">User</div>
+              <div class="stats-body-alt">
+
+                <div class="text-center"><span class="text-top"></span>{{appData.user ? appData.user : 0}}</div>
+                <small>{{appData.current_user ? appData.current_user :0}} user đang hoạt động</small> </div>
+              <div class="stats-footer" (click)="changeCurrentTab('user')">chi tiết</div>
+            </a> </div>
+            <div class="col-md-3 col-xs-12 col-sm-6"> <a href="#" class="stats-container">
+              <div class="stats-heading">Gift</div>
+              <div class="stats-body-alt">
+
+                <div class="text-center"><span class="text-top">$</span>{{appData.balance}}</div>
+                <small>{{appData.current_balance}} $</small> </div>
+              <div class="stats-footer" (click)="changeCurrentTab('result')">Chi tiết</div>
+            </a> </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <ng-container *ngIf = "checkPermission(current_tab)">
+    <check-log  [current_user] = "current_user" *ngIf="current_tab=='check-log'" ></check-log>
+    <command  [current_user] = "current_user" *ngIf="current_tab=='check-nop'" ></command>
+    <format-data  [current_user] = "current_user" *ngIf="current_tab=='format-data'" ></format-data>
+    <check-rate  [current_user] = "current_user" *ngIf="current_tab=='check-rate'" ></check-rate>
+  </ng-container>
+</div>
+
+</div>
+<div  class="bottom-nav footer" style="margin-bottom: 100px"> 2018 &copy; App manager show log waring for system </div>

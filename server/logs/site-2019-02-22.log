@@ -1,0 +1,8 @@
+[2019-02-22T09:28:31.373] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-22T09:40:36.886] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log d:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-22T09:40:49.341] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-bcc-out.logok !
+[2019-02-22T09:41:56.015] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_bccjpy.csv  Ok 
+[2019-02-22T09:47:01.151] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-eth-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-eth-out.log
+[2019-02-22T09:47:21.352] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-eth-out.logok !
+[2019-02-22T09:47:24.361] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_ethjpy.csv  Ok 
+[2019-02-22T10:05:42.855] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_bccjpy.csv  Ok 

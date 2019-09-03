@@ -1,0 +1,4 @@
+/*styles for home content only*/
+:host ::ng-deep .cdk-overlay-container   {
+  font-size: 1.5rem;
+}

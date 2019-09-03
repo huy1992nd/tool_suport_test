@@ -1,0 +1,53 @@
+#player_stats_table{
+	font-size: x-small;
+	color: #FFF;
+}
+
+
+#player_stats_table tfoot{
+	font-weight: bold;
+}
+#player_stats_table thead tr th{
+	font-weight: bold;
+}
+
+
+pre{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+}
+
+.widget:not(.widget-tabs) .tab-content {
+    background: none repeat scroll 0px 0px rgba(51, 51, 51, 0.25);
+    border: medium none;
+    border-radius: 0px 0px 1px 1px;
+    padding: 10px;
+}
+
+#tabcontents{
+	
+	word-wrap: break-word;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.panel:nth-child(n) .panel-heading {
+   border-left: none;
+}
+
+.raw{
+	white-space: normal;
+}
+
+.ui-datepicker-month{
+    background-color: rgb(137, 99, 56);
+}
+.ui-datepicker-year{
+    background-color: rgb(137, 99, 56);
+}
+
+
+.select2-search { background-color: #000; color: #fff;}
+.select2-search input { background-color: #333; color: #fff;}
+.select2-results { background-color: #fff; color: #000;}

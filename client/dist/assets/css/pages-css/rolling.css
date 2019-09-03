@@ -1,0 +1,16 @@
+select.multiselect,
+select.multiselect + div.btn-group,
+select.multiselect + div.btn-group button.multiselect,
+select.multiselect + div.btn-group.open .multiselect-container{
+    width:100% !important;
+}
+
+.select2-search { background-color: #000; color: #fff;}
+.select2-search input { background-color: #333; color: #fff;}
+.select2-results { background-color: #fff; color: #000;}
+
+
+.datepicker {
+background-color: #fff ;
+color: #333 ;
+}

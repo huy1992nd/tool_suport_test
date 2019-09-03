@@ -1,0 +1,106 @@
+<div class="row" >
+  <div class="col-md-3">
+    <div class="widget">
+      <div class="widget-content">
+        <div class="panel-body">
+          <form action="" class="form-horizontal row-border" data-validate="parsley" id="validate-form" >
+            <div class="form-group lable-padd">
+              <label class="col-sm-12">Số sau dấu phẩy:</label>
+              <div class="col-sm-12">
+                <input  type = "number" name="number_point" [(ngModel)]="number_point"   placeholder="Nhập lot limit" class="form-control"   id="number-point">
+              </div>
+            </div>
+
+            <div class="form-group lable-padd">
+              <label class="col-sm-12">Lot Limit:</label>
+              <div class="col-sm-12">
+                <input  type = "number" name="lot_limit" [(ngModel)]="lot_limit"   placeholder="Nhập lot limit" class="form-control"   id="lot-limit">
+              </div>
+            </div>
+
+            <div class="form-group lable-padd">
+              <label class="col-sm-12">Chọn chế độ :</label>
+              <div class="col-sm-12">
+                  <div  style="width: auto ; padding:0 10px" class="select-screen input-group-btn">
+                      <div class=" btn-group bootstrap-select" >
+                        <button style="margin-top: 10px;
+                        margin-left: -8px;
+                        padding: 2px 5px;
+                        min-width: 100px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{current_select? current_select.name:"Select "}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                        <ul role="menu" class="dropdown-menu" style="text-align: left; max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                          <li *ngFor="let c of list_select; let i = index" rel="0">
+                            <a (click)="select(c)" class=""  tabindex="-1">{{c.name}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                   </div>
+              </div>
+            </div>
+            <ng-container *ngIf="current_select.value == 1" >
+              <div class="form-group lable-padd" >
+                <label class="col-sm-12">Dữ liệu:</label>
+                <div class="col-sm-12">
+                  <textarea  name="data-input" [(ngModel)]="data_input"   placeholder="Nhập dữ liệu" class="form-control" name="text" rows="20" id="description"></textarea>
+                </div>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="current_select.value == 2" >
+              <div class="form-group lable-padd" >
+                <label class="col-sm-12">Nhập key redis:</label>
+                <div class="col-sm-12">
+                    <input  type = "text" name="key-redis" [(ngModel)]="key_redis"   placeholder="Nhập key redis" class="form-control"   id="lot-limit">
+                </div>
+              </div>
+              <div class="form-group lable-padd" >
+                <label class="col-sm-12">Nhập thời gian (theo giây):</label>
+                <div class="col-sm-12">
+                    <input  type = "number" name="auto-time" [(ngModel)]="auto_time"   placeholder="Nhập thời gian" class="form-control"   id="time-auto">
+                </div>
+              </div>
+            </ng-container>
+            <hr>
+            <div class="form-group lable-padd" style="text-align: center !important">
+              <button  (click)= "show_data()">Hiển thị</button>
+              <button style="margin-left: 15px" *ngIf="current_select.value == 1"  (click)= "export_excel()">Xuất file</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div *ngIf="data_show" class="tab-content" id="myTabContent" style="min-height: 200px;">
+        <div class="widget-content">
+            <div class="body" style="margin-top: -20px;">
+              <div class="row" style="font-size: 18px; padding: 5px;color: #6597ca;">
+                <div class="col-md-4">{{data_show[0][0]}}</div>
+                <div class="col-md-4">{{data_show[0][2]}}</div>
+                <div class="col-md-4">{{data_show[0][4]}}</div>
+              </div>
+              <table class="table table-border">
+                  <thead>
+                      <tr>
+                        <th>BID Price</th>
+                        <th>BID Amount</th>
+                        <th>ASK Price</th>
+                        <th>ASK Amount</th>
+                      </tr>
+                    </thead>
+                <tbody>
+                  <ng-container *ngFor="let o of data_show; let i = index" [attr.data-index]="i" >
+                      <tr *ngIf="i>3">
+                          <td>{{o[0]}}</td>
+                          <td>{{o[1]}}</td>
+                          <td>{{o[4]}}</td>
+                          <td>{{o[5]}}</td>
+                      </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+

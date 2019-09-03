@@ -1,0 +1,54 @@
+{
+    "mysql": {
+		"connectionLimit": 5,
+		"host": "172.16.9.203",
+		"user": "root",
+		"password": "1234567",
+		"database": "bpe7x_spot_new",
+		"multipleStatements": "true",
+		"timezone": "utc",
+		"debug": false
+		},
+
+	"mongodb":{
+		"URI": "mongodb://172.16.20.129:27017/app_monitor_release"
+	},
+
+	"mailServer":{
+		"host": "smtp.gmail.com", 
+		"port":465,
+		"user": "bbot@miyatsu.vn", 
+		"pass": "Miyatsu@1"
+		},
+
+	"serverLog":{
+		"task_export_log_cpu":{
+			"serverLogSpot": {
+				"host": "172.18.200.79",
+				"user": "bpj",
+				"password": "bpj17admin"
+			},
+			"serverLogMargin": {
+				"host": "172.18.200.80",
+				"user": "bpj",
+				"password": "bpj17admin"
+			}
+		},
+		"task_export_trade":{
+			"serverLogSpot": {
+				"host": "172.18.200.229",
+				"user": "bpj",
+				"password": "l",
+				"path_file_log":""
+			},
+			"serverLogMargin": {
+				"host": "172.18.200.232",
+				"user": "bpj",
+				"password": "bpjadmin",
+				"path_file_log":""
+			}
+		}
+	}
+
+	
+}

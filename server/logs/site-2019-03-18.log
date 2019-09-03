@@ -1,0 +1,600 @@
+[2019-03-18T11:12:16.809] [INFO] warning - task check nop time : 2019-03-18T04:12:16.809Z
+[2019-03-18T11:19:31.221] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T11:19:31.230] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T11:20:18.650] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T11:21:04.326] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T11:21:04.331] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:27:04.009] [INFO] warning - task check nop time : 2019-03-18T07:27:04.009Z
+[2019-03-18T14:29:04.281] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T14:29:04.292] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T14:29:42.435] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T14:30:22.368] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:30:22.374] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:46:47.307] [INFO] warning - task check nop time : 2019-03-18T07:46:47.307Z
+[2019-03-18T14:48:42.639] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T14:48:42.648] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T14:49:21.676] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T14:50:05.089] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:50:05.097] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:53:01.291] [INFO] warning - task check nop time : 2019-03-18T07:53:01.291Z
+[2019-03-18T14:54:56.035] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T14:54:56.040] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T14:55:33.693] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T14:56:15.439] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:56:15.449] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T14:56:45.011] [INFO] warning - task check nop time : 2019-03-18T07:56:45.011Z
+[2019-03-18T14:58:40.097] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T14:58:40.104] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T14:59:18.844] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T15:00:03.430] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:00:03.436] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:05:10.446] [INFO] warning - task check nop time : 2019-03-18T08:05:10.446Z
+[2019-03-18T15:07:06.533] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T15:07:06.540] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T15:07:43.388] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T15:08:24.649] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:08:24.659] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:12:22.729] [INFO] warning - task check nop time : 2019-03-18T08:12:22.729Z
+[2019-03-18T15:14:14.961] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T15:14:14.970] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T15:14:52.697] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T15:15:34.757] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:15:34.768] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:19:30.325] [INFO] warning - task check nop time : 2019-03-18T08:19:30.325Z
+[2019-03-18T15:21:25.406] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T15:21:25.415] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T15:22:00.493] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T15:22:42.752] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:22:42.757] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:27:04.632] [INFO] warning - task check nop time : 2019-03-18T08:27:04.632Z
+[2019-03-18T15:29:01.319] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T15:29:01.327] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T15:29:38.216] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T15:30:21.076] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T15:30:21.082] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:02:47.459] [INFO] warning - task check nop time : 2019-03-18T09:02:47.459Z
+[2019-03-18T16:05:22.829] [INFO] warning - task check nop time : 2019-03-18T09:05:22.828Z
+[2019-03-18T16:07:43.684] [INFO] warning - task check nop time : 2019-03-18T09:07:43.684Z
+[2019-03-18T16:09:45.836] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T16:09:45.846] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T16:10:22.720] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T16:11:05.461] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:11:05.468] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:27:30.083] [INFO] warning - task check nop time : 2019-03-18T09:27:30.083Z
+[2019-03-18T16:29:34.759] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T16:29:34.765] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T16:30:11.164] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T16:30:52.121] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:30:52.127] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:31:30.605] [INFO] warning - task check nop time : 2019-03-18T09:31:30.605Z
+[2019-03-18T16:33:01.029] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T16:33:01.032] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T16:33:05.083] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T16:33:08.958] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:33:08.964] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:34:04.893] [INFO] warning - task check nop time : 2019-03-18T09:34:04.893Z
+[2019-03-18T16:35:37.715] [INFO] warning - SQL SELECT * FROM tmp_nop_v2 ORDER BY id ASC
+[2019-03-18T16:35:37.724] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s ,
+                    -(SUM(filled_quantity * execution_price) / SUM(filled_quantity)) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 3
+                    GROUP BY symbol
+                
+[2019-03-18T16:35:41.724] [INFO] warning - SQL 
+                SELECT 
+                side,
+                currency_pair_cd AS symbol,
+                    SUM(filled_quantity * execution_price) as s,
+                    SUM(filled_quantity * execution_price) / SUM(filled_quantity) AS avg
+                FROM
+                    bpex_execution_orders
+                    where side  = 1
+                    GROUP BY symbol
+                
+[2019-03-18T16:35:46.071] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 3
+                    GROUP BY symbol;
+                    
+[2019-03-18T16:35:46.075] [INFO] warning - SQL 
+                    SELECT 
+                    side,
+                    currency_pair_cd as symbol,
+                    SUM(amount * price) as s ,
+                    SUM(amount * price) / SUM(amount) as avg
+                    FROM
+                        bpex_covers
+                        where side = 1
+                    GROUP BY symbol;
+                    

@@ -1,0 +1,30 @@
+[2019-02-19T16:06:04.472] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log d:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T16:07:56.169] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log d:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T16:09:34.704] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log d:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T16:10:02.786] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-bcc-out.logok !
+[2019-02-19T16:15:33.734] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T16:17:56.720] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/
+[2019-02-19T16:19:14.701] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse
+[2019-02-19T16:22:47.604] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T16:23:07.432] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-bcc-out.logok !
+[2019-02-19T17:11:43.653] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-19T17:12:05.214] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-bcc-out.logok !
+[2019-02-19T17:12:13.993] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log-20190212.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190212.gz
+[2019-02-19T17:15:13.779] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:15:14.513] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-19T17:16:04.749] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190210.gz
+[2019-02-19T17:16:05.176] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gzok !
+[2019-02-19T17:17:33.379] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:17:34.176] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-19T17:19:01.212] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:19:02.028] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-19T17:20:01.416] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190210.gz
+[2019-02-19T17:20:01.824] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gzok !
+[2019-02-19T17:23:12.609] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:23:13.386] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-19T17:24:19.254] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:24:20.061] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-19T17:28:53.288] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190210.gz
+[2019-02-19T17:28:53.681] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190210.gzok !
+[2019-02-19T17:29:58.045] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-19T17:29:58.817] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !

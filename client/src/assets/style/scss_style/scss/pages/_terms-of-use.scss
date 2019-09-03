@@ -1,0 +1,162 @@
+.terms {
+	&__mv {
+		background: url("../images/terms/term_mv.jpg");
+		background-size: cover;
+		padding-top: vw_pc(128);
+		&__ttl {
+			margin-top: vw_pc(36);
+			padding-bottom: vw_pc(228);
+		}
+	}
+	&__item {
+		& + & {
+			margin-top: vw_pc(64);
+		}
+		&__ttl {
+			color: #981b1e;
+			font-size: vw_pc(30);
+			line-height: 1;
+			margin-bottom: vw_pc(70);
+			text-align: center;
+			text-transform: uppercase;
+			position: relative;
+			&:before {
+				background: #981b1e;
+				content: '';
+				width: vw_pc(75);
+				height: vw_pc(2);
+				bottom: vw_pc(-35);
+				left: 50%;
+				transform: translate(-50%, 0);
+				position: absolute;
+			}
+		}
+		&__subttl {
+			color: #808285;
+			font-size: vw_pc(16);
+			line-height: 2rem;
+			margin-bottom: vw_pc(30);
+			text-align: center;
+		}
+		&__desc {
+			color: #981b1e;
+			font-size: vw_pc(24);
+			line-height: 1;
+			margin: vw_pc(40) 0 vw_pc(30);
+			text-align: center;
+		}
+		&__note {
+			color: #981b1e;
+			font-size: vw_pc(18);
+			line-height: 1;
+			margin: vw_pc(10) 0;
+			text-transform: uppercase;
+		}
+		&__txt {
+			color: #808285;
+			font-size: vw_pc(14);
+			span {
+				color: #981b1e;
+			}
+			a {
+				color: #981b1e;
+			}
+		}
+	}
+	&__step {
+		&__list {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			margin-top: vw_pc(40);
+			position: relative;
+			counter-reset: step;
+		}
+		&__item {
+			overflow: hidden;
+			width: calc(100% / 3);
+			counter-increment: step;
+			cursor: pointer;
+			&__ttl {
+				color: #981b1e;
+				font-size: vw_pc(24);
+				line-height: 1.2;
+				margin-bottom: vw_pc(26);
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:hover {
+				.terms__step__item__txt {
+					height: auto;
+					opacity: 1;
+				}
+			}
+			&:first-child {
+				.terms__step__item__number {
+					&:before {
+						left: 50%;
+					}
+				}
+			}
+			&:last-child {
+				.terms__step__item__number {
+					&:before {
+						right: 50%;
+					}
+				}
+			}
+			&__number {
+				height: vw_pc(55);
+				position: relative;
+				width: 100%;
+				margin-bottom: vw_pc(25);
+				&:hover {
+					&:after {
+						background: #981b1e;
+						color: #fff;
+					}
+				}
+				&:after {
+					color: #981b1e;
+					font-size: vw_pc(24);
+					border: vw_pc(3) solid #981b1e;
+					border-radius: 50%;
+					background: #fff;
+					content: counter(step);
+					display: block;
+					height: 100%;
+					left: 50%;
+					line-height: vw_pc(49);
+					position: absolute;
+					top: 0;
+					transform: translateX(-50%);
+					width: vw_pc(55);
+				}
+
+				&:before {
+					background: #981b1e;
+					content: '';
+					display: block;
+					height: vw_pc(3);
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					z-index: -1;
+				}
+			}
+			&__txt {
+				color: #808285;
+				font-size: vw_pc(16);
+				line-height: 1.3;
+				height: 0;
+				opacity: 0;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

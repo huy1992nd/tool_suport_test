@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+@import "mixin";
+@import "fonts";
+@import "common";
+// @import "tour_map";
+
+// Common partials
+// @import "partials/header";
+// @import "partials/content";
+// @import "partials/footer";
+
+@import "pages/user";
+@import "pages/task";

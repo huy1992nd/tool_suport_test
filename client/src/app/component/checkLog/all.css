@@ -1,0 +1,30 @@
+.select-file-log::before {
+  content: " ";
+  margin-right: 10px;
+}
+.error-check{
+  background-color: red;
+}
+
+.select-config-log::before {
+  content: " ";
+  margin-right: 10px;
+}
+label
+{
+  text-align: left;
+  color: cornsilk;
+}
+
+td {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.panel-body {
+  padding: 0px;
+}

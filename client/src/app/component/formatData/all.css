@@ -1,0 +1,27 @@
+.select-config::before {
+  content: "Select enviroment : ";
+  margin-right: 10px;
+}
+label
+{
+  text-align: left;
+}
+
+td {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+ /* td:nth-child(3){
+   border-right: solid 1px #123456;
+ }
+ td:nth-child(2){
+   border-right: solid 1px #123456;
+ } */
+ /* tr:nth-child(3){
+   color: #85add4;
+   font-size: 18px;;
+ }
+ tr:nth-child(4){
+   color: #85add4;
+   font-size: 18px;;
+ } */

@@ -1,0 +1,134 @@
+/* .modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: url('../images/loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+ */
+#loading-indicator {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 50%;
+	top: 50%;
+	height: 100px;
+	width: 100px;
+	margin-left: -50px; /*image width/2 */
+	margin-top: -50px; /*image height/2 */
+}
+
+/* body.loading {
+    overflow: hidden;   
+}
+
+body.loading .modal {
+    display: block;
+}
+ */
+body {
+	color: white;
+}
+
+.combobox {
+	background: rgba(0, 0, 0, 0.25);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #fff;
+	min-height: 30px;
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+.combobox option {
+	background: #68442c;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #fff;
+	min-height: 30px;
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+div.gamelist {
+	margin: 2px;
+	border: 0px solid #0000ff;
+	height: auto;
+	width: auto;
+	float: left;
+	text-align: center;
+}
+
+div.gamelist img {
+	display: inline;
+	margin: 1px;
+	border: 1px solid #ffffff;
+}
+
+div.gamelist a:hover img {
+	border: 1px solid #000000;
+}
+
+div.desc {
+	text-align: center;
+	font-weight: normal;
+	width: 200px;
+	margin: 1px;
+}
+
+#showdebug {
+	cursor: hand
+}
+
+.multiselect-group{
+	color: #000;
+}
+		
+.modal-content {
+    
+    background-color: #58403e;
+    
+}
+ 
+.modal-header{
+	color: #fff;
+}
+
+.control-label{
+	color: #fff;
+}
+.bootbox-body{
+	color: #fff;
+}
+
+
+.alert-info{
+	word-break: break-all;
+}
+
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+    color: #fff;
+}
+
+#ul_languages {
+max-width: 320px;
+min-width: 200px;
+padding: 0;
+width: 0px;
+}
+
+.servertime{
+	border-bottom: 1px solid rgba(255,255,255, 0.1);
+	text-align: center;
+	background-color: rgba(0, 0, 0, 1.3);
+	padding: 5px;	
+}
+.language-tick{
+	cursor:pointer;
+}	
+

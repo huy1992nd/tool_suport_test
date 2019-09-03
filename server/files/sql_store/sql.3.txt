@@ -1,0 +1,22 @@
+-- Begin: generate_nop_sql_v2
+-- Sinh lenh SQL tinh NOP
+
+CREATE PROCEDURE generate_nop_sql_v2(IN symbol VARCHAR(20), IN isB2C TINYINT, IN endTime VARCHAR(30), OUT nopSQL TEXT) DETERMINISTIC
+BEGIN
+	-- Su dung de truy van
+    DECLARE customerSQLWhere TEXT DEFAULT "";
+	DECLARE coverSQLWhere TEXT DEFAULT "";
+
+	-- Sinh dieu kien WHERE
+	CALL generate_sql_where_clause_v2(0, symbol, isB2C, endTime, customerSQLWhere);
+	CALL generate_sql_where_clause_v2(1, symbol, isB2C, endTime, coverSQLWhere);
+
+	-- Tao lenh SQL sinh view chua du lieu
+	SET nopSQL = "";
+	SET nopSQL = "(SELECT execution_id, currency_pair_cd, IF(side='1', '3', IF(side='3', '1', '0')) as side, filled_quantity, execution_price, execution_dt, \"customer\" AS type FROM bpex_execution_orders WHERE ";
+	SET nopSQL = CONCAT(nopSQL, customerSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") UNION ALL (SELECT id as execution_id, currency_pair_cd, side, amount as filled_quantity, price as execution_price, trade_dt as execution_dt, \"cover\" AS type FROM bpex_covers WHERE ");
+	SET nopSQL = CONCAT(nopSQL, coverSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") UNION ALL (SELECT '1970010100000000000' as execution_id, currency_pair_cd, side, filled_quantity, execution_price, '2017-05-01 00.00.00.000' as execution_dt, \"customer\" AS type FROM bpex_mm_orders WHERE order_id = '1970010100000000000' AND ");
+	SET nopSQL = CONCAT(nopSQL, customerSQLWhere);
+	SET nopSQL = CONCAT(nopSQL, ") ORDER BY execution_dt, execution_id");

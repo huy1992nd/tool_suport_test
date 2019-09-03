@@ -1,0 +1,24 @@
+
+.user {
+	&__email {
+		&__setting {
+			max-height: 60vh;
+			overflow-y: scroll;
+		}
+		&__check {
+			width: 50px;
+			display: inline-flex;
+
+			& button {
+				padding: 3.6px 12px !important;
+				width: 100%;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+		}
+		&__input {
+			$w:50px;
+			width: calc(100% - #{$w}) ;
+		}
+	}
+}

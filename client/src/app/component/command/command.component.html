@@ -1,0 +1,158 @@
+<div class="row" >
+  <div class="col-lg-12">
+    <div class="widget" style="min-height: 1000px">
+      <div class="widget-header"> <i class="icon-ok-sign"></i>
+        <h3> Setting</h3>
+      </div>
+      <div class="widget-content">
+        <form class="form-horizontal label-left" method="post"
+                    data-validate="parsley"
+                    novalidate="novalidate">
+          <fieldset>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row control-group" style="padding: 5px ">
+                  <div class="col-md-3 col-sm-3" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;" > 
+                    <div  style="width: auto ; padding:0 10px" class="select-config input-group-btn">
+                      <div class=" btn-group bootstrap-select" >
+                        <button style="margin-top: -3px;padding: 2px 5px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{current_config.name? current_config.name:"Select  environment"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                        <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                          <li *ngFor="let c of list_config; let i = index" rel="0">
+                            <a (click)="changeConfig(c)" class=""  tabindex="-1">{{c.name}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                   </div>
+                  </div>
+                  <ng-container *ngIf="current_config.name">
+                    <div class="col-md-3 col-sm-3" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;" > 
+                      <div  style="width: auto ; padding:0 10px" class="select-screen input-group-btn">
+                        <div class=" btn-group bootstrap-select" >
+                          <button style="margin-top: -3px;padding: 2px 5px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{current_screen? current_screen.name:"Select  screen"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                          <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                            <li *ngFor="let c of list_screen; let i = index" rel="0">
+                              <a (click)="changeScreen(c)" class=""  tabindex="-1">{{c.name}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                     </div>
+                    </div>
+                    <div *ngIf="current_screen.name == 'nop_realtime'||current_screen.name == 'nop_daily'" class="col-md-3 col-sm-3" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;" > 
+                      <div  style="width: auto ; padding:0 10px" class="select-market input-group-btn">
+                        <div class=" btn-group bootstrap-select" >
+                          <button style="margin-top: -3px;padding: 2px 5px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{current_market? current_market.name:"Select  market"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                          <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                            <li *ngFor="let c of list_market; let i = index" rel="0">
+                              <a (click)="changeMarket(c)" class=""  tabindex="-1">{{c.name}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                     </div>
+                    </div>
+                    <div  class="col-md-3 col-sm-3" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;" > 
+                      <div  style="width: auto ; padding:0 10px ; margin-top: -6px" class="select-symbol input-group-btn">
+                        <div class=" btn-group bootstrap-select" >
+                            <ng-multiselect-dropdown
+                            name="list_symbol"
+                            [placeholder]="'Chọn cặp Symbol'"
+                            [data]="list_symbol"
+                            [(ngModel)]="list_symbol_select"
+                            [settings]="dropdownSettings"
+                            (onSelect)="onItemSelect($event)"
+                            (onSelectAll)="onSelectAll($event)"
+                          >
+                        </ng-multiselect-dropdown>
+                        </div>
+                     </div>
+                    </div>
+                  </ng-container>
+                  
+                <hr  *ngIf="is_config" style="margin: 100px 42px 40px 20px ; opacity: 0.3;">
+                <div *ngIf="is_config" class="col-md-12 col-sm-12" style="display: flex;align-items: center;justify-content: center;">
+                    <button (click)="check()" class="btn btn-primary" style="background-color: crimson">{{process? 'Waiting...':'Check'}}</button>
+                    <span  style="display: flex;justify-content: space-between;align-items: center;margin-left: 10px;"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset *ngIf="nop_realtime">
+            <div class="row">
+              <div class="col-md-12"><legend class="task__output__ttl section"> Kết quả check </legend>
+                <div class="tab-content" id="myTabContent" style="min-height: 200px;">
+                  <div class="widget-content">
+                      <div class="body">
+                        <table class="table table-border">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Symbol</th>
+                              <th>Kết quả</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <ng-container *ngFor="let symbol of objectKeys(nop_realtime); let i = index" [attr.data-index]="i" >
+                                <tr>
+                                    <td>{{i+1}}</td>
+                                    <td>{{symbol}}</td>
+                                    <td>
+                                      <ul>
+                                        <li 
+                                        *ngFor="let k of objectKeys(nop_realtime[symbol]); ">
+                                        {{k}} : {{nop_realtime[symbol][k]}}
+                                        </li>
+                                      </ul>
+                                    </td>
+                                </tr>
+                            </ng-container>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </fieldset>
+        <fieldset *ngIf="nop_price_engine">
+            <div class="row">
+              <div class="col-md-12">
+                Link download img : http://172.16.20.130:6789/download/zip/task_report_price_engine/img_data.zip
+              </div>
+              <div class="col-md-12"><legend class="task__output__ttl section"> Kết quả check </legend>
+                <div class="tab-content" id="myTabContent" style="min-height: 200px;">
+                  <div class="widget-content">
+                      <div class="body">
+                        <table class="table table-border  ">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Symbol</th>
+                              <th>Kết quả</th>
+                              <th>Chi tiết</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <ng-container *ngFor="let symbol of objectKeys(nop_price_engine); let i = index" [attr.data-index]="i" >
+                                <tr [ngClass]="{'error-check': nop_price_engine[symbol].status}">
+                                    <td>{{i+1}}</td>
+                                    <td>{{symbol}}</td>
+                                    <td>{{nop_price_engine[symbol].status?'Sai':'Đúng'}}</td>
+                                    <td>
+                                        {{nop_price_engine[symbol].detail}}
+                                    </td>
+                                </tr>
+                            </ng-container>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

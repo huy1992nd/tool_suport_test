@@ -1,0 +1,39 @@
+.glowbutton{
+ box-shadow:0px 0px 15px #fff;
+ -moz-box-shadow:0px 0px 15px #fff;
+ -webkit-box-shadow:0px 0px 15px #fff;   
+}
+
+.dropdown option{
+	background: #68442c;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #fff;
+	min-height: 30px;
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+.popover{
+	background-color: white;
+	color: black;
+}
+
+.popover-title{
+	background-color: #f7f7f7;
+}
+
+.popover-content{
+	background-color: white
+}
+
+.popover.top {
+  margin-top: -40px;
+}
+
+.modal-lg{
+	width: 1200px;
+}
+.modal-body{
+	padding-bottom: 30px;
+}

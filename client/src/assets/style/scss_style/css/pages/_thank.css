@@ -1,0 +1,54 @@
+.thank {
+  background: url("../images/customized_tour/thank_bg.jpg");
+  background-size: cover;
+  margin-bottom: vw_pc(-180);
+  padding: vw_pc(130) 0 vw_pc(195);
+  text-align: center; }
+  .thank_img {
+    margin: vw_pc(73) auto 0;
+    width: vw_pc(158); }
+    .thank_img img {
+      width: 100%; }
+  .thank__ttl {
+    color: #fff;
+    font-size: vw_pc(24);
+    font-family: "helveticaneue-medium",sans-serif;
+    margin: vw_pc(32) 0 vw_pc(9); }
+  .thank__subttl {
+    color: #fff;
+    font-size: vw_pc(14);
+    font-family: "helveticaneue-italic",sans-serif;
+    line-height: 1; }
+    .thank__subttl a {
+      border-bottom: vw_pc(1) solid #fff;
+      color: #fff;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .thank__subttl a:hover {
+        opacity: .7; }
+  .thank__txt {
+    color: #fff;
+    font-size: vw_pc(12);
+    font-family: "helveticaneue-italic",sans-serif;
+    margin: vw_pc(10) 0 vw_pc(40); }
+  .thank__btn {
+    border: vw_pc(1) solid #faa635;
+    border-radius: vw_pc(22);
+    height: vw_pc(45);
+    line-height: vw_pc(45);
+    margin: 0 auto;
+    width: vw_pc(240); }
+    .thank__btn a {
+      color: #fff;
+      display: block;
+      font-size: vw_pc(16);
+      font-family: "helveticaneue-light",sans-serif;
+      height: 100%;
+      text-transform: uppercase;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      width: 100%; }
+      .thank__btn a:hover {
+        opacity: .7; }

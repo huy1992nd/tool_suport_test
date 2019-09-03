@@ -1,0 +1,36 @@
+.privacy {
+	&__mv {
+		background: url("../images/terms/term_mv.jpg");
+		background-size: cover;
+		padding-top: vw_pc(128);
+		&__ttl {
+			margin-top: vw_pc(36);
+			padding-bottom: vw_pc(228);
+		}
+	}
+	&__content {
+		&__ttl {
+			color: #808285;
+			font-size: vw_pc(16);
+			line-height: 1.3;
+			margin-bottom: vw_pc(42);
+			text-align: center;
+		}
+	}
+	&__item {
+		& + & {
+			margin-top: vw_pc(26);
+		}
+		&__ttl {
+			color: #981b1e;
+			font-size: vw_pc(18);
+			line-height: 1.2;
+			text-transform: uppercase;
+		}
+		&__txt {
+			color: #808285;
+			font-size: vw_pc(14);
+			line-height: 1.3;
+		}
+	}
+}

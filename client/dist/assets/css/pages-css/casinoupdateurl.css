@@ -1,0 +1,27 @@
+tr.group,
+tr.group:hover {
+    background-color: rgb(240, 173, 78) !important;
+    font-size: large;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase
+    
+}
+
+.dropdown option{
+	background: #68442c;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #fff;
+	min-height: 30px;
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}

@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'helveticaneue';
+  src: url("../fonts/HELVETICANEUE.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'helveticaneue-light';
+  src: url("../fonts/HELVETICANEUE-LIGHT.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'helveticaneue-italic';
+  src: url("../fonts/HELVETICANEUE-ITALIC.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'helveticaneue-medium';
+  src: url("../fonts/HELVETICANEUE-MEDIUM.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'bledascript';
+  src: url("../fonts/BLENDA SCRIPT.OTF") format("opentype"); }
+
+.select-config-redis::before {
+  content: "Redis enviroment : ";
+  margin-right: 10px; }
+
+.select-symbol::before {
+  content: "Symbol : ";
+  margin-right: 10px; }
+
+.select-type::before {
+  content: "Type : ";
+  margin-right: 10px; }
+
+.input-order-id::before {
+  content: "Order id : ";
+  margin-right: 10px; }
+
+.user__email__setting {
+  max-height: 60vh;
+  overflow-y: scroll; }
+
+.user__email__check {
+  width: 50px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .user__email__check button {
+    padding: 3.6px 12px !important;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+
+.user__email__input {
+  width: calc(100% - 50px); }
+
+.task__output__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.task__output__ttl {
+  margin-top: 35px;
+  color: white !important;
+  font-size: 18px; }
+
+.task__output__item {
+  margin: 10px; }
+  .task__output__item__txt {
+    color: #ffffff;
+    border: 1px solid #e90d0d;
+    background-color: rgba(66, 139, 202, 0.55);
+    border-color: #357ebd;
+    padding: 5px 0px;
+    padding-left: 5px; }
+  .task__output__item--delete {
+    background-color: crimson;
+    padding: 7px;
+    margin-left: 5px; }
+  .task__output__item--add {
+    background-color: crimson;
+    padding: 7px 10px;
+    margin-left: 0px; }

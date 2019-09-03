@@ -1,0 +1,35 @@
+
+.task {
+	&__output {
+		&__list {
+				display: flex;
+				flex-wrap: wrap;
+		}
+		&__ttl {
+			margin-top: 35px;
+			color: white !important;
+			font-size: 18px;
+		}
+		&__item {
+			margin: 10px;
+			&__txt {
+				color: #ffffff;
+				border: 1px solid #e90d0d;
+				background-color: rgba(66, 139, 202, 0.55);
+				border-color: #357ebd;
+				padding: 5px 0px;
+				padding-left: 5px;
+			}
+			&--delete{
+				background-color: crimson;
+				padding: 7px;
+				margin-left: 5px;
+			}
+			&--add {
+				background-color: crimson;
+				padding: 7px 10px;
+				margin-left: 0px;
+			}
+		}
+	}
+}

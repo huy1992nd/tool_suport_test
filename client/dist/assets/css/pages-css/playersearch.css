@@ -1,0 +1,17 @@
+#last_ten_transactions_heading, #last_ten_sessions_heading, #last_ten_broken_games_heading{
+	height: 55px;	
+}
+
+
+select.multiselect,
+select.multiselect + div.btn-group,
+select.multiselect + div.btn-group button.multiselect,
+select.multiselect + div.btn-group.open .multiselect-container{
+    width:100% !important;
+}
+
+
+.session_modal{
+	width: 1100px;
+}
+

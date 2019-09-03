@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"hA+b":function(n){n.exports=[{res:"data"}]}}]);

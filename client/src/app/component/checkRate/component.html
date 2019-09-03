@@ -1,0 +1,153 @@
+<div class="row">
+  <div class="col-md-3" style=" margin-top: -90px">
+    <fieldset>
+      <div class="row ">
+        <div class="col-md-6">
+          <div class="row control-group" style="padding: 5px ">
+            <div class="col-md-12 col-sm-12" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;">
+              <div style="width: auto ; padding:0 10px" class="select-config-5 input-group-btn">
+                <div class=" btn-group bootstrap-select" data-toggle="tooltip" title="Môi trường!">
+                  <button style="margin-top: -3px;padding: 2px 5px; min-width: 150px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary"
+                    id="phone-type"><span class="filter-option">{{form_data.current_config.name? form_data.current_config.name:"Select
+                      environment"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                  <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                    <li *ngFor="let c of list_config; let i = index" rel="0">
+                      <a (click)="changeConfig(c)" class="" tabindex="-1">{{c.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row control-group" style="padding: 5px ">
+            <div class="col-md-12 col-sm-12" style="padding: 20px 0px;display: flex;align-items: center;justify-content: center;">
+              <div style="width: auto ; padding:0 10px" class="select-config-5 input-group-btn">
+                <div class=" btn-group bootstrap-select" data-toggle="tooltip" title="Số sàn!">
+                  <button style="margin-top: -3px;padding: 2px 5px; min-width: 50px;" data-toggle="dropdown" class="btn dropdown-toggle clearfix btn-primary"
+                    id="phone-type"><span class="filter-option">{{form_data.number_content.value? form_data.number_content.value:"Select
+                      number exchange"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                  <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                    <li *ngFor="let c of list_number_content; let i = index" rel="0">
+                      <a (click)="changeNumberExchange(c)" class="" tabindex="-1">{{c.value}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+<div class="row">
+  <ng-container *ngFor="let ccc of form_data.array_exchange; let ii = index" rel="0">
+    <div class="col-md-6 detail-show">
+      <div class="detail-show-content">
+        <div class="row" style="
+            background-color: rgba(0, 0, 0, 0.35);
+            margin-left: 0px;
+            margin-right: 0px;
+             ">
+          <div class="col-md-3 col-sm-3" style="padding: 20px 0px ;display: flex;align-items: center;justify-content: center;">
+            <div style="width: auto ; padding:0 10px" class="select-config-5 input-group-btn">
+              <div class=" btn-group bootstrap-select">
+                <button title="Tên sàn!" style="margin-top: -3px;padding: 2px 5px; min-width: 100px;" data-toggle="dropdown"
+                  class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{form_data.current_gateway[ii]?
+                    form_data.current_gateway[ii].name:"Select gateway"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                  <li *ngFor="let c of list_gateway; let i = index" rel="0">
+                    <a (click)="changeGateway(c,ii)" class="" tabindex="-1">{{c.name}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ng-container *ngIf="form_data.current_symbol[ii] && form_data.current_gateway[ii]">
+            <div class="col-md-3 col-sm-3" style="padding: 20px 0px 10px;display: flex;align-items: center;justify-content: center;">
+              <div style="width: auto ; padding:0 10px" class="select-screen-2 input-group-btn">
+                <div class=" btn-group bootstrap-select">
+                  <button title="Symbol!" style="margin-top: -3px;padding: 2px 5px; min-width: 100px;" data-toggle="dropdown"
+                    class="btn dropdown-toggle clearfix btn-primary" id="phone-type"><span class="filter-option">{{form_data.current_symbol[ii]?
+                      form_data.current_symbol[ii].bpex:"Select Symbol"}}</span>&nbsp;<i class="icon-caret-down"></i></button>
+                  <ul role="menu" class="dropdown-menu" style="max-height: 260.75px; overflow-y: auto; min-height: 60px;">
+                    <li *ngFor="let c of form_data.list_symbol[ii]; let i = index" rel="0">
+                      <a (click)="selectSymbol(c,ii)" class="" tabindex="-1">{{c.bpex}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3" style="padding: 0px 0px 10px 0px;display: flex;align-items: center;justify-content: center;">
+              <span style="margin-top: 15px;">Số dòng: </span>
+              <div style="width: auto ; padding:0 10px" class="select-screen-2 input-group-btn">
+                <input data-toggle="tooltip" title="Số dòng!" type="number" name="form_data.number_row{{ii}}" [(ngModel)]="form_data.number_row[ii]"
+                  min="0" max="50" placeholder="Nhập lot limit" class="number_row form-control" id="number-row">
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3" style="padding: 0px 0px 10px 0px;display: flex;align-items: center;justify-content: center;">
+              <span style="margin-top: 15px;">Lotlimit: </span>
+              <div style="width: auto ; padding:0 10px" class="select-screen-2 input-group-btn">
+                <input data-toggle="tooltip" title="lot limit!" type="number" name="[form_data.lot_limmit{{ii}}" [(ngModel)]="form_data.lot_limmit[ii]"
+                  min="0" max="50" placeholder="Nhập lot limit" class="number_row form-control" id="lot-limit">
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12" style="padding: 0px 0px 15px;display: flex;align-items: center;justify-content: center;">
+              <div style="width: auto ; padding:0 10px" class="price select-screen-2 input-group-btn">
+                <span><i style="font-weight: bold ;color: #66a8ea;">BID: </i> {{form_data.price[ii].bid}}</span>
+                <span><i style="font-weight: bold ; color: #66a8ea;">MID: </i> {{form_data.price[ii].mid}}</span>
+                <span><i style="font-weight: bold ; color: #66a8ea;">ASK: </i> {{form_data.price[ii].ask}}</span>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <fieldset *ngIf="form_data.list_order_book[ii] && form_data.current_gateway[ii]">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="tab-content" id="myTabContent" style="min-height: 200px;">
+                <div class="widget-content" style="border: 0px;border-top-left-radius: 0px;padding-top: 0px;">
+                  <div class="body">
+                    <table class="table table-border t_title" style="margin-bottom: 0px">
+                      <thead>
+                        <tr>
+                          <th>TOTAL BID</th>
+                          <th>BID Price</th>
+                          <th>BID Amount</th>
+                          <th>ASK price</th>
+                          <th>ASK amount</th>
+                          <th>TOTAL ASK</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="widget-content" style="border: 0px;border-top-left-radius: 0px;padding-top: 0px;overflow-y: scroll;max-height: 920px">
+                  <div class="body">
+                    <table class="table table-border">
+                      <tbody>
+                        <ng-container *ngFor="let o of form_data.list_order_book[ii]; let i = index" [attr.data-index]="i">
+                          <tr>
+                            <td>{{o.bid[2] ? o.bid[2].toFixed(8) : o.bid[2]}}</td>
+                            <td>{{o.bid[0]}}</td>
+                            <td>{{o.bid[1]}}</td>
+                            <td>{{o.ask[0]}}</td>
+                            <td>{{o.ask[1]}}</td>
+                            <td>{{o.ask[2]? o.ask[2].toFixed(8) : o.ask[2]}}</td>
+                          </tr>
+                        </ng-container>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </ng-container>
+</div>

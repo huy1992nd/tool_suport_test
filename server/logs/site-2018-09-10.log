@@ -1,0 +1,139 @@
+[2018-09-10T09:34:28.535] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:37:02.467] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:37:37.109] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:38:31.346] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:40:45.456] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:41:20.372] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:42:32.652] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:43:15.691] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:43:33.438] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:46:47.069] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:47:31.350] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:47:44.786] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:54:31.681] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:55:10.376] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T09:55:40.449] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T11:13:00.253] [INFO] warning - Gateway quoine -- btcjpy connected
+[2018-09-10T11:13:01.370] [INFO] warning - Gateway bitfinex -- xrpusd connected
+[2018-09-10T11:13:02.261] [INFO] warning - Gateway quoine -- ethjpy connected
+[2018-09-10T11:13:06.151] [INFO] warning - Gateway bitfinex -- btcusd connected
+[2018-09-10T11:13:07.196] [INFO] warning - Gateway quoine -- btcjpy connected
+[2018-09-10T11:13:07.212] [INFO] warning - Gateway bitfinex -- ltcusd connected
+[2018-09-10T11:13:08.198] [INFO] warning - Gateway quoine -- ethjpy connected
+[2018-09-10T11:13:08.206] [INFO] warning - Gateway bitfinex -- bccusd connected
+[2018-09-10T11:13:08.213] [INFO] warning - Gateway bitfinex -- xrpusd connected
+[2018-09-10T11:13:09.187] [INFO] warning - Gateway bitfinex -- ethusd connected
+[2018-09-10T11:13:15.354] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T11:13:16.254] [INFO] warning - Gateway quoine -- bccjpy connected
+[2018-09-10T11:51:00.802] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:51:00.811] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:51:00.812] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T11:51:00.813] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T11:51:00.814] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:51:00.815] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:51:04.417] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T11:51:04.438] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T11:51:04.557] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T11:51:04.560] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T11:51:04.761] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T11:51:04.764] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T11:51:04.882] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T11:51:04.885] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T11:51:05.070] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T11:51:05.074] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T11:51:05.339] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T11:51:05.347] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T11:53:00.476] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:53:00.482] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:53:00.483] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T11:53:00.484] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T11:53:00.485] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:53:00.485] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T11:53:03.478] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T11:53:03.481] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T11:53:03.659] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T11:53:03.664] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T11:53:03.806] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T11:53:03.815] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T11:53:04.105] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T11:53:04.117] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T11:53:04.445] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T11:53:04.449] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T11:53:04.713] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T11:53:04.727] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T13:13:00.546] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:13:00.560] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:13:00.562] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T13:13:00.563] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T13:13:00.564] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:13:00.565] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:13:04.013] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T13:13:04.017] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T13:13:04.164] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T13:13:04.166] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T13:13:04.465] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T13:13:04.472] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T13:13:04.701] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T13:13:04.704] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T13:13:04.866] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T13:13:04.870] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T13:13:05.178] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T13:13:05.188] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T13:24:00.423] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:24:00.427] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:24:00.429] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T13:24:00.430] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T13:24:00.430] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:24:00.432] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T13:24:03.765] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T13:24:03.771] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T13:24:03.884] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T13:24:03.888] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T13:24:04.118] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T13:24:04.128] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T13:24:04.326] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T13:24:04.331] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T13:24:04.459] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T13:24:04.462] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T13:24:04.781] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T13:24:04.786] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T14:01:00.816] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T14:01:00.831] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T14:01:00.834] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T14:01:00.835] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T14:01:00.836] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T14:01:00.837] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T14:01:03.445] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T14:01:03.448] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T14:01:03.676] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T14:01:03.679] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T14:01:03.874] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T14:01:03.878] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T14:01:03.989] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T14:01:03.993] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T14:01:04.119] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T14:01:04.125] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T14:01:04.257] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T14:01:04.260] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T14:28:45.000] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T14:30:26.758] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T15:11:14.820] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T15:45:45.225] [INFO] warning - Gateway bitflyer -- btcjpy connected
+[2018-09-10T16:01:00.289] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T16:01:00.296] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T16:01:00.297] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_btc_others-2018-09-09-fillter.log
+[2018-09-10T16:01:00.298] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_spot/logs/api_notbtc_other-2018-09-09-fillter.log
+[2018-09-10T16:01:00.299] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_btc_jpy-2018-09-09-fillter.log
+[2018-09-10T16:01:00.301] [INFO] warning - task_export_trade  cat /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09.log | grep -E "log_monitor_trade_" > /home/hieu/bpex_release/api_margin/logs/api_notbtc_jpy-2018-09-09-fillter.log
+[2018-09-10T16:01:03.601] [INFO] warning - task_export_trade fileName api_notbtc_other-2018-09-09.log
+[2018-09-10T16:01:03.604] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_other-2018-09-09.xlsx
+[2018-09-10T16:01:03.843] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T16:01:03.847] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T16:01:04.032] [INFO] warning - task_export_trade fileName api_notbtc_jpy-2018-09-09.log
+[2018-09-10T16:01:04.035] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_notbtc_jpy-2018-09-09.xlsx
+[2018-09-10T16:01:04.152] [INFO] warning - task_export_trade fileName api_btc_others-2018-09-09.log
+[2018-09-10T16:01:04.155] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_others-2018-09-09.xlsx
+[2018-09-10T16:01:04.523] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T16:01:04.526] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/spot_api_btc_jpy-2018-09-09.xlsx
+[2018-09-10T16:01:04.731] [INFO] warning - task_export_trade fileName api_btc_jpy-2018-09-09.log
+[2018-09-10T16:01:04.735] [INFO] warning - task_export_trade Succesfully uploaded D:/huy/bpex/research/app_monitor/log/save/task_export_trade/margin_api_btc_jpy-2018-09-09.xlsx

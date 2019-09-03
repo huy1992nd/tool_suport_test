@@ -1,0 +1,264 @@
+/*
+ * Bootstrap Fixes for Thin Admin
+ */ 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.container {
+  width: auto;
+}
+.breadcrumb {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.jumbotron {
+  color: #333;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0px;
+  margin: 2px 0px 0px;
+  font-size: 14px;
+  list-style: none outside none;
+  background-color: rgba(222, 222, 222, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+  background-clip: padding-box;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #445486;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-color: #428BCA;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+.nav-tabs > li > a:hover {
+  border-color: transparent;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid transparent;
+}
+.tab-content {
+  background-color: rgba(51, 51, 51, 0.25);
+  padding: 0 10px 10px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-stacked > li > a > span.glyphicon {
+  display: none;
+}
+.nav-stacked > li.active > a > span.glyphicon,
+.nav-stacked > li > a:hover > span.glyphicon,
+.nav-stacked > li > a:focus > span.glyphicon {
+  display: block;
+}
+.nav-tabs .open > a, .nav-tabs .open > a:hover, .nav-tabs .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: transparent;
+}
+.panel {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);  
+}
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.panel-default > .panel-footer {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+	background-color: rgba(0, 0, 0, 0.1)
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  border-top: 0;
+}
+.form-control {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #eee;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.label-info {
+  background-color: #FE0000;
+} 
+ 
+.badge {
+  display: list-item;
+  min-width: 10px;
+  padding: 4px 7px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: #FFF;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #FE0000;
+  border-radius: 10px;
+  margin: -28px 0px 0px 10px;
+  position: relative;
+}
+
+.nav-stacked > li > a > .badge {
+  margin-top: 0px;
+}
+
+.btn-default {
+  color: #333333;
+  background-color: rgba(222, 222, 222, 0.55);
+  border-color: #cccccc;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: rgba(222, 222, 222, 0.45);
+  border-color: #adadad;
+}
+.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.input-group-addon {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+  font-size: 14px;
+}
+legend {
+  color: #fff;
+}
+
+/*
+ * datatables
+ */
+div.dataTables_processing {
+  background: none;
+  padding: 0;
+  border: 0;
+} 
+div.dataTables_length select {
+  color: #333;
+  font-weight: normal;
+}
+div.dataTables_filter input[type="search"] {
+  font-weight: normal;
+}
+table.dataTable th {
+  font-weight: bold;
+}
+tr.odd {
+  background-color: rgba(0,0,0,0.1);
+}
+tr.even {
+  background-color: rgba(0,0,0,0.3);
+}
+table.dataTable tr td.sorting_1 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+table.dataTable tr:hover td.sorting_1 {
+ background-color: rgba(0, 0, 0, 0.4);
+}
+.paging_full_numbers a.paginate_button.current {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tooltip {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/**
+ * ckeditor
+ */
+.cke_reset_all input[type="text"] {
+  color: #333;
+}

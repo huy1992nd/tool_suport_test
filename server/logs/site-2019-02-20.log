@@ -1,0 +1,19 @@
+[2019-02-20T08:41:34.969] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-20T08:41:35.746] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-20T08:46:47.824] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gz D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log-20190209.gz
+[2019-02-20T08:46:48.611] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/old_logs/pe-bcc-out.log-20190209.gzok !
+[2019-02-20T09:04:10.703] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-bcc-out.log D:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-bcc-out.log
+[2019-02-20T09:04:21.615] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-bcc-out.logok !
+[2019-02-20T09:25:05.973] [INFO] warning - start download file log async: /home/bpex/.pm2/logs/pe-btc-out.log d:/huy/bpex/research/app_monitor/log/tmp/task_export_log_analyse/pe-btc-out.log
+[2019-02-20T09:26:19.050] [INFO] warning - task_export_log_analyse download /home/bpex/.pm2/logs/pe-btc-out.logok !
+[2019-02-20T17:33:10.761] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:35:00.648] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:36:48.474] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:37:32.326] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:40:50.530] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:41:37.476] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:48:47.045] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:49:21.709] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:49:49.856] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T17:59:41.999] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 
+[2019-02-20T18:01:36.136] [INFO] warning - tool_export_log_analyse  action : export file log file_analyse_btcjpy.csv  Ok 

@@ -1,0 +1,205 @@
+{
+  "ssh":{
+    "test":{
+      "mysql":{
+        "host": "172.16.20.121",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/var/log/mysql/"
+      },
+      "nop":{
+        "host": "172.16.20.124",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "bpex_core":{
+        "host": "172.16.20.128",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/bpex_core/"
+      },
+      "price_engine":{
+        "host": "172.16.20.128",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "gateway":{
+        "host": "172.16.20.122",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "api_spot":{
+        "host": "172.16.20.127",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/api_spot/logs/"
+      },
+      "api_margin":{
+        "host": "172.16.20.126",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/api_margin/logs/"
+      }
+    },
+    "dev":{
+      "mysql":{
+        "host": "172.16.20.151",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/var/log/mysql/"
+      },
+      "nop":{
+        "host": "172.16.20.152",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "bpex_core":{
+        "host": "172.16.20.153",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/bpex_core/"
+      },
+      "price_engine":{
+        "host": "172.16.20.153",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "gateway":{
+        "host": "172.16.20.157",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/.pm2/logs/"
+      },
+      "api_spot":{
+        "host": "172.16.20.154",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/api_spot/logs/"
+      },
+      "api_margin":{
+        "host": "172.16.20.156",
+        "username": "bpex",
+        "password": "miyatsu@1",
+        "folder_log":"/home/bpex/bpex_release/api_margin/logs/"
+      }
+    }
+
+  },
+  "mysql": {
+    "task_check_nop":{
+       "dev":
+       {
+         "spot":  {
+          "connectionLimit": 5,
+          "host": "172.16.20.151",
+          "user": "root",
+          "password": "miyatsu@1",
+          "database": "bpe7x_spot",
+          "multipleStatements": "true",
+          "timezone": "utc",
+          "debug": false
+         },
+         "margin":  {
+          "connectionLimit": 5,
+          "host": "172.16.20.151",
+          "user": "root",
+          "password": "miyatsu@1",
+          "database": "bpe7x_margin",
+          "multipleStatements": "true",
+          "timezone": "utc",
+          "debug": false
+         }
+       },
+       "test":
+       {
+         "spot":  {
+          "connectionLimit": 5,
+          "host": "172.16.20.121",
+          "user": "root",
+          "password": "miyatsu@1",
+          "database": "bpe7x_spot",
+          "multipleStatements": "true",
+          "timezone": "utc",
+          "debug": false
+         },
+         "margin":  {
+          "connectionLimit": 5,
+          "host": "172.16.20.121",
+          "user": "root",
+          "password": "miyatsu@1",
+          "database": "bpe7x_margin",
+          "multipleStatements": "true",
+          "timezone": "utc",
+          "debug": false
+         }
+       }
+     
+    }
+  },
+  "redis" : {
+    "task_check_nop" : {
+      "dev" :{
+        "server":"172.16.20.155",
+        "pass" : "liquid109"
+      },
+      "test" :{
+        "server":"172.16.20.123",
+        "pass" : "liquid109"
+      }
+    },
+    "task_check_rate" : {
+      "dev" :{
+        "server":"172.16.20.155",
+        "pass" : "liquid109"
+      },
+      "test" :{
+        "server":"172.16.20.123",
+        "pass" : "liquid109"
+      },
+      "staging" :{
+        "server":"172.19.10.159",
+        "pass" : "liquid109"
+      }
+    }
+  },
+  "chatwork": {
+    "task_check_log":{
+      "roomId": "110664331",
+      "chatworkToken":"fcc6a8a5d9e9b14c554c9978316183d1"
+    }
+  },
+
+  "screen_nop":{
+    "dev":{
+      "user":"root",
+      "pass":"mvn123",
+      "ip":"http://172.16.20.152:8888/#/",
+      "timeDelay":10,
+      "showBrowser":false
+    },
+    "test":{
+      "user":"root",
+      "pass":"mvn123",
+      "ip":"http://172.16.20.124:8888/#/",
+      "timeDelay":10,
+      "showBrowser":false
+    }
+  },
+  "mongodb": {
+    // "URI": "mongodb://172.16.20.129:27017/app_monitor_release_v_2"
+    // "URI": "mongodb://172.16.20.129:27017/tool_suport_tester"
+    "URI": "mongodb://172.16.20.129:27017/tool_suport_tester_local"
+  },
+  "ext_token":86400,
+  "timeDelay":10,
+  "showBrowser":false,
+  "time_return_orderbook":500,
+  "number_orderbook":200,
+  "number_check_log":30,
+  "check_log_change_file_time":60000
+}
