@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "adm-zip": "^0.4.11",
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "bcrypt-nodejs": "0.0.3",
     "buffered-stream": "0.0.1",
     "chatwork-client": "^1.0.11",
